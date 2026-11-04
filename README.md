@@ -5,7 +5,8 @@ Materials for NC State University Libraries' Introduction to QualCoder (Data Sci
 open-source program for qualitative data analysis, set up a project folder and a QualCoder
 project, import interview transcripts, code them, add memos and annotations, and run reports.
 
-The guide is for QualCoder version 3.8.2.
+The guide is for QualCoder version 3.8.2. It's online at
+https://ncsu-libraries.github.io/intro-qualcoder/qualcoder-workshop.html.
 
 - `qualcoder-workshop.qmd`: the guide we work from in the session. Steps are in purple boxes,
   with tabs where Mac and Windows differ; everything else is explanation.
