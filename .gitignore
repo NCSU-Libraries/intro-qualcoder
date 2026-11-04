@@ -1,0 +1,22 @@
+# Quarto working files
+/.quarto/
+/*_files/
+**/*.quarto_ipynb
+
+# The rendered guide (*.html) IS committed on purpose: GitHub Pages will serve it.
+
+# Team sources (slides and the Word walkthrough). Not published.
+/sources/
+
+# Internal planning notes and local working notes for AI-assisted editing
+/planning/
+CLAUDE.md
+
+# QualCoder projects, backups and reports from run-throughs
+*.qda/
+report*.xlsx
+~$*
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
