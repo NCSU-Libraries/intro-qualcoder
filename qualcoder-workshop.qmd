@@ -113,9 +113,9 @@ More things to try, including how to work on a project with a team, are in
 
 ### Where we're headed {.unnumbered}
 
-By the end of the session you'll have a project that looks like this: a transcript with a few
-codes applied (each code has its own color), a memo or two, and a report that pulls all the text
-for one code together across interviews.
+By the end of the session you'll have a project that looks like this: three interviews with
+singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls
+together everything Dolly Parton, Cyndi Lauper and Alicia Keys said about one idea.
 
 ::: {.placeholder}
 **Screenshot: `images/roadmap-end-result.png`.** The Coding tab of a finished workshop project:
@@ -250,7 +250,7 @@ We'll build this layout:
 
 ```{.folders}
 qualcoder-workshop/          <- your project folder (you make this)
-├── data/                    <- your clean, original transcripts (you make this)
+├── data/                    <- your original interview files (you make this)
 ├── backups/                 <- QualCoder's automatic backups (you make this)
 └── intro_qc_workshop.qda/   <- the QualCoder project (QualCoder makes this in section 3)
 ```
@@ -306,22 +306,58 @@ in the home folder, with `data` and `backups` inside it.
 
 ## Get today's transcripts {#sec-data}
 
-::: {.placeholder}
-**Data to come.** 1–3 interview transcripts for the session, as clean `.txt` files in this
-repository's `data/` folder, with a short description of where they come from, a citation and
-their license. The steps below will link to each file. See `planning/session-outline.md`.
-:::
+Today we code three interviews with singers, from the Library of Congress. Each was done when one
+of the singer's recordings was added to the [National Recording
+Registry](https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/),
+and each singer answers similar questions: where the songs came from, how the record got made and
+why it still connects with people. That overlap makes them good for coding: the same ideas come
+up in all three, in different words.
+
+| Singer | Recording | Interview | Length |
+|--------|-----------|-----------|--------|
+| Dolly Parton | "Coat of Many Colors" (1971) | 2016 | 2 pages |
+| Cyndi Lauper | *She's So Unusual* (1983) | 2019 | 4 pages |
+| Alicia Keys | *Songs in A Minor* (2001) | 2022 | 4 pages |
+
+**Our research question for today:** *How do singers describe where their songs come from, and
+why those songs connect with people?* A real study would start from a question like this; we use
+it to decide what to code.
 
 ::: callout-note
-## In your browser: download the transcripts
+## In your browser: download the interviews
 
-1. Download each transcript: [links to the files in `data/`]{.tbd}.
-2. Move them from your **Downloads** folder into `qualcoder-workshop/data`.
+1. Click each link to download the interview as a PDF:
+   - [Dolly Parton](https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DollyPartonInterview.pdf)
+   - [Cyndi Lauper](https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CyndiLauperInterview.pdf)
+   - [Alicia Keys](https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interview_Alicia-Keys.pdf)
+2. If a PDF opens in your browser instead of downloading, use the browser's download button
+   (or **File > Save As**).
+3. Move the three PDFs from your **Downloads** folder into `qualcoder-workshop/data`.
 :::
 
-Transcripts should be **clean** before you import them: names and identifying details removed,
-speaker labels consistent, and typos fixed. Plain text (`.txt`) and Word (`.docx`) files both
-work.
+::: callout-warning
+## Gotcha: "Verify you are human"
+
+The Library of Congress website may show a security check before the first download. Tick the
+box, wait for the page to load, then click the link again.
+:::
+
+The interviews are a good example of real-world data: they weren't made for analysis. In the
+PDFs, every line ends in a line break, even mid-sentence; the interviewer is labeled "LOC",
+"Library of Congress" or "LC"; and the editors added notes in [square brackets]. Ideally,
+transcripts are **clean** before you import them: speaker labels consistent, typos fixed, and
+names and identifying details removed if the participants were promised confidentiality. Today
+we import the PDFs as they are; see [Clean a transcript before importing](#sec-clean) for how to
+tidy one up. QualCoder imports plain text (`.txt`), Word (`.docx`) and PDF files.
+
+::: callout-tip
+## Extra: who owns an interview?
+
+The Library of Congress shares these interviews but, as its [legal
+page](https://www.loc.gov/legal/) explains, generally doesn't own the rights to what it shares.
+That's why this guide links to the Library's copies instead of handing out its own. When you
+reuse someone else's interviews in your research, check the license and the terms of use first.
+:::
 
 # Create a QualCoder project {#sec-project}
 
@@ -529,6 +565,9 @@ transcripts selected.
 
 :::
 
+The PDFs are imported as text, so you can code them like any transcript [confirm how 3.8.2
+shows these PDFs in the Coding tab]{.tbd}.
+
 ![Manage files is the first item in the Manage menu.](images/import-manage-menu.png){fig-alt="QualCoder's Manage menu open with Manage files (Alt+F) highlighted. The other items are Manage cases, Manage journals, Manage attributes, Manage references, Import survey and a greyed-out Manage bad links to files." width="60%"}
 
 ![The Import file into project folder button is the first button on the Manage tab.](images/import-button.png){fig-alt="The Manage tab in QualCoder. The first button in its toolbar, a page with a plus sign, is boxed in red, with the tooltip Import file into project folder. The file count reads Files: 0." width="60%"}
@@ -539,20 +578,23 @@ Attributes describe your files: for example, the participant's role, the intervi
 site. They help you keep track of which file is which, and you can use them to filter reports.
 They're especially useful on a team.
 
-::: {.placeholder}
-**Attributes to come.** 1–2 attributes that fit today's transcripts (for example, a character
-attribute "Role" and a numeric attribute "Year"), chosen when the data is chosen.
-:::
+We'll add two attributes to the interviews: the singer's **Genre** (text) and the **Year** of the
+recording (a number).
+
+| File | Genre | Year |
+|------|-------|-----:|
+| DollyPartonInterview.pdf | Country | 1971 |
+| CyndiLauperInterview.pdf | Pop | 1983 |
+| Interview_Alicia-Keys.pdf | R&B | 2001 |
 
 ::: callout-note
-## In QualCoder: create an attribute
+## In QualCoder: create two attributes
 
 1. In the top menu, go to **Manage > Manage Attributes**.
 2. Click the **(x)** button to add an attribute.
-3. Type the attribute name: [attribute name]{.tbd}.
-4. Choose **Character** (text) or **Numeric**.
-5. Choose **Files** for what the attribute describes (it can also describe cases or journals).
-6. Click **OK**.
+3. Type `Genre`, choose **Character** (text), and choose **Files** for what it describes (it can
+   also describe cases or journals). Click **OK**.
+4. Click **(x)** again. Type `Year`, choose **Numeric** and **Files**, and click **OK**.
 :::
 
 ![Manage attributes is in the Manage menu.](images/attributes-menu.png){fig-alt="QualCoder's Manage menu open with Manage attributes (Alt+A) highlighted, below Manage files, Manage cases and Manage journals." width="60%"}
@@ -568,7 +610,8 @@ type chosen and **Files** selected.
 ## In QualCoder: fill in the attribute for each file
 
 1. Click **Manage > Manage Files**. Each attribute is now a column.
-2. Click the cell for each file and type its value. To edit a value, double-click the cell.
+2. Click the cell for each file and type its value from the table above. To edit a value,
+   double-click the cell.
 :::
 
 ::: {.placeholder}
@@ -579,8 +622,8 @@ in for each transcript.
 ::: callout-tip
 ## Extra: put attributes in your own order
 
-QualCoder lists attributes alphabetically. To set your own order, number them: "1. Role",
-"2. Year".
+QualCoder lists attributes alphabetically. To set your own order, number them: "1. Year",
+"2. Genre".
 :::
 
 # Code your transcripts {#sec-coding}
@@ -605,17 +648,19 @@ list on the left and a transcript open on the right.
 
 ## Demo: coding with example codes {#sec-demo}
 
-Watch first, then try it. We'll code part of one transcript together with a few example codes.
+Watch first, then try it. We'll code part of the Cyndi Lauper interview together, with four
+example codes that fit our research question. Each code has a short definition, so everyone (and
+your future self) applies it the same way.
 
-::: {.placeholder}
-**Example codes to come.** 2–5 codes that fit today's transcripts, each with a one-line
-definition and an example passage from the data, for example:
+| Code | Use it when the singer... | Where to look, for example |
+|------|---------------------------|----------------------------|
+| **Inspiration from life** | ties a song to something that happened to them or people they know | Cyndi Lauper on the loud clock behind "Time After Time" |
+| **Industry pushback** | describes the record company, managers or radio disagreeing with them, or them pushing back | Cyndi Lauper on choosing her first single |
+| **Faith and spirituality** | mentions God, faith or a spiritual feeling | Alicia Keys on the chorus of "Troubles" |
+| **Why it connects** | explains why listeners relate to the song | Dolly Parton on why "Coat" became so dear to people |
 
-| Code | What it means | Example passage |
-|------|---------------|-----------------|
-| [code 1]{.tbd} | [definition]{.tbd} | [quote from transcript]{.tbd} |
-| [code 2]{.tbd} | [definition]{.tbd} | [quote from transcript]{.tbd} |
-:::
+A list of codes like this, with definitions and examples, is a **codebook**. In your own research
+you'd build and revise it as you read.
 
 Highlight the text you want to code, then use a keyboard shortcut or right-click:
 
@@ -630,12 +675,14 @@ The shortcuts are the same on Mac and Windows [confirm on a Mac]{.tbd}.
 ::: callout-note
 ## In QualCoder: code a passage
 
-1. Highlight a passage in the transcript.
-2. Press **Shift + N**, type the code name ([code 1]{.tbd}) and click **OK**. The passage is
+1. Open **CyndiLauperInterview.pdf**.
+2. Highlight her answer about where "Time After Time" came from (the clock and the watch).
+3. Press **Shift + N**, type `Inspiration from life` and click **OK**. The passage is
    highlighted in the code's color, and the code appears in the codes list on the lower left.
-3. Highlight another passage that fits the same code, press **Shift + R** and pick it from the
-   list.
-4. To remove a code, click in the coded text and press **Shift + U**.
+4. Add the other three codes the same way, each on a passage that fits it.
+5. Highlight another passage that fits a code you've already made, press **Shift + R** and pick
+   the code from the list.
+6. To remove a code, click in the coded text and press **Shift + U**.
 :::
 
 ::: {.placeholder}
@@ -653,20 +700,24 @@ or category, or delete it.
 ::: callout-note
 ## In QualCoder: your turn (5 minutes)
 
-1. Open [transcript name]{.tbd}.
-2. Read it and code passages with the example codes from the demo. If you'd like to, add one
-   code of your own.
+1. Open **DollyPartonInterview.pdf**. It's 2 pages.
+2. Read it and code passages with the four example codes. If you'd like to, add one code of your
+   own.
 3. Try coding one passage with two codes, so it's underlined.
 4. Pick a passage you've coded and add a memo to it (see the next section).
+5. Finished early? Code some of the Alicia Keys interview, so your reports have more to show.
 :::
 
 > What did you notice? Was there a passage that didn't fit any code, or that fit more than one?
+> Did you code the interviewer's questions, or only the answers?
 
 ## Memos {#sec-memos}
 
 A memo is a note attached to coded text. After you code a passage, add a memo that sums it up:
-what about this text helps answer your research question? Later you can run a report of only
-memos (@sec-reports), which gives you a head start on writing your analysis.
+what about this text helps answer your research question? For example, on a passage coded
+*Inspiration from life*: "Turns a painful memory into a song; writing it helped her let go of the
+hurt." Later you can run a report of only memos (@sec-reports), which gives you a head start on
+writing your analysis.
 
 ::: callout-note
 ## In QualCoder: memo coded text
@@ -687,7 +738,9 @@ decides where the memo shows up in reports.
 ## Annotations
 
 An annotation explains a piece of text: an acronym, short-hand or a reference a reader wouldn't
-know. Unlike a memo, the text doesn't need to be coded.
+know. Unlike a memo, the text doesn't need to be coded. For example, Dolly Parton mentions
+"Porter": an annotation can say that's Porter Wagoner, the country singer she performed with at
+the time.
 
 ::: callout-note
 ## In QualCoder: annotate text
@@ -698,8 +751,8 @@ know. Unlike a memo, the text doesn't need to be coded.
 :::
 
 ::: {.placeholder}
-**Screenshot: `images/annotations.png`.** An annotation window open on an acronym in the
-transcript.
+**Screenshot: `images/annotations.png`.** An annotation window open on "Porter" in the Dolly
+Parton interview.
 :::
 
 ## Reading the coding tab
@@ -717,7 +770,8 @@ used by a code; hover over one to see which.
 # Run reports {#sec-reports}
 
 A report pulls together all the text for the codes and files you choose. This is where coding
-turns into analysis.
+turns into analysis. Try it with all three interviews and the code **Faith and spirituality**:
+how does each singer talk about it?
 
 ::: {.panel-tabset group="os"}
 
@@ -847,6 +901,23 @@ boxed.
   [Reports](https://qualcoder.org/doc/en/5.3.-Reports/) in the documentation.
 - [NC State University Libraries Data Science Services](https://www.lib.ncsu.edu/dss): book a
   consultation for help with your project [confirm link]{.tbd}.
+- The Library of Congress [index of Recording Registry
+  interviews](https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/index-of-interviews/):
+  more than 100 more interviews with musicians, producers and songwriters to practice on.
+
+## References {#sec-references .unnumbered}
+
+Library of Congress. (2016, February 19). *Interview with Dolly Parton* [Interview transcript].
+National Recording Preservation Board, National Recording Registry.
+<https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DollyPartonInterview.pdf>
+
+Library of Congress. (2019, May 24). *Interview with Cyndi Lauper* [Interview transcript].
+National Recording Preservation Board, National Recording Registry.
+<https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CyndiLauperInterview.pdf>
+
+Library of Congress. (2022, April 13). *Interview with Alicia Keys* [Interview transcript].
+National Recording Preservation Board, National Recording Registry.
+<https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interview_Alicia-Keys.pdf>
 
 # Extra activities {#sec-extras .unnumbered}
 
@@ -893,6 +964,45 @@ QualCoder may open your most recent project when it starts. If it doesn't:
 :::
 
 Each time you open QualCoder, check that you're in the right project.
+
+## Clean a transcript before importing {#sec-clean .unnumbered}
+
+Today's PDFs have line breaks in the middle of sentences and inconsistent speaker labels. Clean
+text is easier to read and code, and makes it easier to search for one speaker. Try it on the
+Dolly Parton interview:
+
+::: {.panel-tabset group="os"}
+### Mac
+
+::: callout-note
+## In TextEdit: make a clean text copy
+
+1. Open the PDF, select all the text (**Cmd + A**) and copy it (**Cmd + C**).
+2. Open **TextEdit**, choose **Format > Make Plain Text**, and paste (**Cmd + V**).
+3. Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a
+   blank line between turns.
+4. Use the same label for each speaker every time, such as `INTERVIEWER:` and `DOLLY PARTON:`.
+5. Save as `DollyParton_clean.txt` in `qualcoder-workshop/data`, with **Unicode (UTF-8)**
+   encoding.
+:::
+
+### Windows
+
+::: callout-note
+## In Notepad: make a clean text copy
+
+1. Open the PDF, select all the text (**Ctrl + A**) and copy it (**Ctrl + C**).
+2. Open **Notepad** and paste (**Ctrl + V**).
+3. Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a
+   blank line between turns.
+4. Use the same label for each speaker every time, such as `INTERVIEWER:` and `DOLLY PARTON:`.
+5. Save as `DollyParton_clean.txt` in `qualcoder-workshop\data`, with **UTF-8** encoding.
+:::
+
+:::
+
+Import the clean copy (@sec-import) and compare it with the PDF version in the Coding tab. Clean
+your files *before* you start coding: QualCoder's **Edit Text** is meant for small fixes only.
 
 ## Fix a typo in a transcript {.unnumbered}
 

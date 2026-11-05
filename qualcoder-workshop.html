@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="NC State University Libraries — Data Science Services">
-<meta name="dcterms.date" content="2026-11-04">
+<meta name="dcterms.date" content="2026-11-05">
 
 <title>Introduction to QualCoder</title>
 <style>
@@ -2243,11 +2243,15 @@ table.shortcuts td, table.shortcuts th { text-align: center; }
   <li><a href="#a-codes-by-file-matrix" id="toc-a-codes-by-file-matrix" class="nav-link" data-scroll-target="#a-codes-by-file-matrix"><span class="header-section-number">6.2</span> A codes-by-file matrix</a></li>
   </ul></li>
   <li><a href="#sec-close" id="toc-sec-close" class="nav-link" data-scroll-target="#sec-close"><span class="header-section-number">7</span> Close your project</a></li>
-  <li><a href="#sec-resources" id="toc-sec-resources" class="nav-link" data-scroll-target="#sec-resources"><span class="header-section-number">8</span> QualCoder resources</a></li>
+  <li><a href="#sec-resources" id="toc-sec-resources" class="nav-link" data-scroll-target="#sec-resources"><span class="header-section-number">8</span> QualCoder resources</a>
+  <ul class="collapse">
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a></li>
+  </ul></li>
   <li><a href="#sec-extras" id="toc-sec-extras" class="nav-link" data-scroll-target="#sec-extras">Extra activities</a>
   <ul class="collapse">
   <li><a href="#sec-team" id="toc-sec-team" class="nav-link" data-scroll-target="#sec-team">Working as a team</a></li>
   <li><a href="#open-an-existing-project" id="toc-open-an-existing-project" class="nav-link" data-scroll-target="#open-an-existing-project">Open an existing project</a></li>
+  <li><a href="#sec-clean" id="toc-sec-clean" class="nav-link" data-scroll-target="#sec-clean">Clean a transcript before importing</a></li>
   <li><a href="#fix-a-typo-in-a-transcript" id="toc-fix-a-typo-in-a-transcript" class="nav-link" data-scroll-target="#fix-a-typo-in-a-transcript">Fix a typo in a transcript</a></li>
   <li><a href="#memo-a-whole-file" id="toc-memo-a-whole-file" class="nav-link" data-scroll-target="#memo-a-whole-file">Memo a whole file</a></li>
   <li><a href="#more-coding-shortcuts" id="toc-more-coding-shortcuts" class="nav-link" data-scroll-target="#more-coding-shortcuts">More coding shortcuts</a></li>
@@ -2279,7 +2283,7 @@ table.shortcuts td, table.shortcuts th { text-align: center; }
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 4, 2026</p>
+      <p class="date">November 5, 2026</p>
     </div>
   </div>
   
@@ -2359,7 +2363,7 @@ Conventions (see CLAUDE.md):
 </section>
 <section id="where-were-headed" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="where-were-headed">Where we’re headed</h3>
-<p>By the end of the session you’ll have a project that looks like this: a transcript with a few codes applied (each code has its own color), a memo or two, and a report that pulls all the text for one code together across interviews.</p>
+<p>By the end of the session you’ll have a project that looks like this: three interviews with singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls together everything Dolly Parton, Cyndi Lauper and Alicia Keys said about one idea.</p>
 <div class="placeholder">
 <p><strong>Screenshot: <code>images/roadmap-end-result.png</code>.</strong> The Coding tab of a finished workshop project: the codes list on the left with 2–5 codes in their colors, a transcript on the right with several passages highlighted, at least one passage underlined (2+ codes) and one italicized (memo).</p>
 </div>
@@ -2528,7 +2532,7 @@ Conventions (see CLAUDE.md):
 <p>Before you open QualCoder, decide where your project will live and make a folder for it. A QualCoder project is a folder ending in <code>.qda</code> that holds a database of your codes, memos and copies of your files. Keeping it in a folder of its own, next to your original data and your backups, makes the project easy to find, copy and hand on.</p>
 <p>We’ll build this layout:</p>
 <pre class="folders"><code>qualcoder-workshop/          &lt;- your project folder (you make this)
-├── data/                    &lt;- your clean, original transcripts (you make this)
+├── data/                    &lt;- your original interview files (you make this)
 ├── backups/                 &lt;- QualCoder&#39;s automatic backups (you make this)
 └── intro_qc_workshop.qda/   &lt;- the QualCoder project (QualCoder makes this in section 3)</code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -2596,26 +2600,87 @@ Conventions (see CLAUDE.md):
 </div>
 <section id="sec-data" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">2.1</span> Get today’s transcripts</h2>
-<div class="placeholder">
-<p><strong>Data to come.</strong> 1–3 interview transcripts for the session, as clean <code>.txt</code> files in this repository’s <code>data/</code> folder, with a short description of where they come from, a citation and their license. The steps below will link to each file. See <code>planning/session-outline.md</code>.</p>
-</div>
+<p>Today we code three interviews with singers, from the Library of Congress. Each was done when one of the singer’s recordings was added to the <a href="https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/">National Recording Registry</a>, and each singer answers similar questions: where the songs came from, how the record got made and why it still connects with people. That overlap makes them good for coding: the same ideas come up in all three, in different words.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Singer</th>
+<th>Recording</th>
+<th>Interview</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dolly Parton</td>
+<td>“Coat of Many Colors” (1971)</td>
+<td>2016</td>
+<td>2 pages</td>
+</tr>
+<tr class="even">
+<td>Cyndi Lauper</td>
+<td><em>She’s So Unusual</em> (1983)</td>
+<td>2019</td>
+<td>4 pages</td>
+</tr>
+<tr class="odd">
+<td>Alicia Keys</td>
+<td><em>Songs in A Minor</em> (2001)</td>
+<td>2022</td>
+<td>4 pages</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Our research question for today:</strong> <em>How do singers describe where their songs come from, and why those songs connect with people?</em> A real study would start from a question like this; we use it to decide what to code.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>In your browser: download the transcripts
+<span class="screen-reader-only">Note</span>In your browser: download the interviews
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Download each transcript: <span class="tbd">links to the files in <code>data/</code></span>.</li>
-<li>Move them from your <strong>Downloads</strong> folder into <code>qualcoder-workshop/data</code>.</li>
+<li>Click each link to download the interview as a PDF:
+<ul>
+<li><a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DollyPartonInterview.pdf">Dolly Parton</a></li>
+<li><a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CyndiLauperInterview.pdf">Cyndi Lauper</a></li>
+<li><a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interview_Alicia-Keys.pdf">Alicia Keys</a></li>
+</ul></li>
+<li>If a PDF opens in your browser instead of downloading, use the browser’s download button (or <strong>File &gt; Save As</strong>).</li>
+<li>Move the three PDFs from your <strong>Downloads</strong> folder into <code>qualcoder-workshop/data</code>.</li>
 </ol>
 </div>
 </div>
-<p>Transcripts should be <strong>clean</strong> before you import them: names and identifying details removed, speaker labels consistent, and typos fixed. Plain text (<code>.txt</code>) and Word (<code>.docx</code>) files both work.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Gotcha: “Verify you are human”
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Library of Congress website may show a security check before the first download. Tick the box, wait for the page to load, then click the link again.</p>
+</div>
+</div>
+<p>The interviews are a good example of real-world data: they weren’t made for analysis. In the PDFs, every line ends in a line break, even mid-sentence; the interviewer is labeled “LOC”, “Library of Congress” or “LC”; and the editors added notes in [square brackets]. Ideally, transcripts are <strong>clean</strong> before you import them: speaker labels consistent, typos fixed, and names and identifying details removed if the participants were promised confidentiality. Today we import the PDFs as they are; see <a href="#sec-clean">Clean a transcript before importing</a> for how to tidy one up. QualCoder imports plain text (<code>.txt</code>), Word (<code>.docx</code>) and PDF files.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Extra: who owns an interview?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Library of Congress shares these interviews but, as its <a href="https://www.loc.gov/legal/">legal page</a> explains, generally doesn’t own the rights to what it shares. That’s why this guide links to the Library’s copies instead of handing out its own. When you reuse someone else’s interviews in your research, check the license and the terms of use first.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="sec-project" class="level1" data-number="3">
@@ -2893,6 +2958,7 @@ Conventions (see CLAUDE.md):
 </div>
 </div>
 </div>
+<p>The PDFs are imported as text, so you can code them like any transcript <span class="tbd">confirm how 3.8.2 shows these PDFs in the Coding tab</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img role="img" aria-label="QualCoder&#39;s Manage menu open with Manage files (Alt+F) highlighted. The other items are Manage cases, Manage journals, Manage attributes, Manage references, Import survey and a greyed-out Manage bad links to files." src="data:image/png;base64,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" class="img-fluid figure-img" style="width:60.0%" alt="QualCoder&#39;s Manage menu open with Manage files (Alt+F) highlighted. The other items are Manage cases, Manage journals, Manage attributes, Manage references, Import survey and a greyed-out Manage bad links to files."></p>
@@ -2909,26 +2975,48 @@ Conventions (see CLAUDE.md):
 <section id="add-attributes" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="add-attributes"><span class="header-section-number">4.2</span> Add attributes</h2>
 <p>Attributes describe your files: for example, the participant’s role, the interview date or the site. They help you keep track of which file is which, and you can use them to filter reports. They’re especially useful on a team.</p>
-<div class="placeholder">
-<p><strong>Attributes to come.</strong> 1–2 attributes that fit today’s transcripts (for example, a character attribute “Role” and a numeric attribute “Year”), chosen when the data is chosen.</p>
-</div>
+<p>We’ll add two attributes to the interviews: the singer’s <strong>Genre</strong> (text) and the <strong>Year</strong> of the recording (a number).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Genre</th>
+<th style="text-align: right;">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DollyPartonInterview.pdf</td>
+<td>Country</td>
+<td style="text-align: right;">1971</td>
+</tr>
+<tr class="even">
+<td>CyndiLauperInterview.pdf</td>
+<td>Pop</td>
+<td style="text-align: right;">1983</td>
+</tr>
+<tr class="odd">
+<td>Interview_Alicia-Keys.pdf</td>
+<td>R&amp;B</td>
+<td style="text-align: right;">2001</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>In QualCoder: create an attribute
+<span class="screen-reader-only">Note</span>In QualCoder: create two attributes
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>In the top menu, go to <strong>Manage &gt; Manage Attributes</strong>.</li>
 <li>Click the <strong>(x)</strong> button to add an attribute.</li>
-<li>Type the attribute name: <span class="tbd">attribute name</span>.</li>
-<li>Choose <strong>Character</strong> (text) or <strong>Numeric</strong>.</li>
-<li>Choose <strong>Files</strong> for what the attribute describes (it can also describe cases or journals).</li>
-<li>Click <strong>OK</strong>.</li>
+<li>Type <code>Genre</code>, choose <strong>Character</strong> (text), and choose <strong>Files</strong> for what it describes (it can also describe cases or journals). Click <strong>OK</strong>.</li>
+<li>Click <strong>(x)</strong> again. Type <code>Year</code>, choose <strong>Numeric</strong> and <strong>Files</strong>, and click <strong>OK</strong>.</li>
 </ol>
 </div>
 </div>
@@ -2959,7 +3047,7 @@ Conventions (see CLAUDE.md):
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Click <strong>Manage &gt; Manage Files</strong>. Each attribute is now a column.</li>
-<li>Click the cell for each file and type its value. To edit a value, double-click the cell.</li>
+<li>Click the cell for each file and type its value from the table above. To edit a value, double-click the cell.</li>
 </ol>
 </div>
 </div>
@@ -2976,7 +3064,7 @@ Conventions (see CLAUDE.md):
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>QualCoder lists attributes alphabetically. To set your own order, number them: “1. Role”, “2. Year”.</p>
+<p>QualCoder lists attributes alphabetically. To set your own order, number them: “1. Year”, “2. Genre”.</p>
 </div>
 </div>
 </section>
@@ -3008,31 +3096,44 @@ Conventions (see CLAUDE.md):
 </section>
 <section id="sec-demo" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-demo"><span class="header-section-number">5.2</span> Demo: coding with example codes</h2>
-<p>Watch first, then try it. We’ll code part of one transcript together with a few example codes.</p>
-<div class="placeholder">
-<p><strong>Example codes to come.</strong> 2–5 codes that fit today’s transcripts, each with a one-line definition and an example passage from the data, for example:</p>
+<p>Watch first, then try it. We’ll code part of the Cyndi Lauper interview together, with four example codes that fit our research question. Each code has a short definition, so everyone (and your future self) applies it the same way.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 44%">
+<col style="width: 45%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Code</th>
-<th>What it means</th>
-<th>Example passage</th>
+<th>Use it when the singer…</th>
+<th>Where to look, for example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="tbd">code 1</span></td>
-<td><span class="tbd">definition</span></td>
-<td><span class="tbd">quote from transcript</span></td>
+<td><strong>Inspiration from life</strong></td>
+<td>ties a song to something that happened to them or people they know</td>
+<td>Cyndi Lauper on the loud clock behind “Time After Time”</td>
 </tr>
 <tr class="even">
-<td><span class="tbd">code 2</span></td>
-<td><span class="tbd">definition</span></td>
-<td><span class="tbd">quote from transcript</span></td>
+<td><strong>Industry pushback</strong></td>
+<td>describes the record company, managers or radio disagreeing with them, or them pushing back</td>
+<td>Cyndi Lauper on choosing her first single</td>
+</tr>
+<tr class="odd">
+<td><strong>Faith and spirituality</strong></td>
+<td>mentions God, faith or a spiritual feeling</td>
+<td>Alicia Keys on the chorus of “Troubles”</td>
+</tr>
+<tr class="even">
+<td><strong>Why it connects</strong></td>
+<td>explains why listeners relate to the song</td>
+<td>Dolly Parton on why “Coat” became so dear to people</td>
 </tr>
 </tbody>
 </table>
-</div>
+<p>A list of codes like this, with definitions and examples, is a <strong>codebook</strong>. In your own research you’d build and revise it as you read.</p>
 <p>Highlight the text you want to code, then use a keyboard shortcut or right-click:</p>
 <table class="caption-top table">
 <colgroup>
@@ -3077,9 +3178,11 @@ Conventions (see CLAUDE.md):
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Highlight a passage in the transcript.</li>
-<li>Press <strong>Shift + N</strong>, type the code name (<span class="tbd">code 1</span>) and click <strong>OK</strong>. The passage is highlighted in the code’s color, and the code appears in the codes list on the lower left.</li>
-<li>Highlight another passage that fits the same code, press <strong>Shift + R</strong> and pick it from the list.</li>
+<li>Open <strong>CyndiLauperInterview.pdf</strong>.</li>
+<li>Highlight her answer about where “Time After Time” came from (the clock and the watch).</li>
+<li>Press <strong>Shift + N</strong>, type <code>Inspiration from life</code> and click <strong>OK</strong>. The passage is highlighted in the code’s color, and the code appears in the codes list on the lower left.</li>
+<li>Add the other three codes the same way, each on a passage that fits it.</li>
+<li>Highlight another passage that fits a code you’ve already made, press <strong>Shift + R</strong> and pick the code from the list.</li>
 <li>To remove a code, click in the coded text and press <strong>Shift + U</strong>.</li>
 </ol>
 </div>
@@ -3108,20 +3211,21 @@ Conventions (see CLAUDE.md):
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Open <span class="tbd">transcript name</span>.</li>
-<li>Read it and code passages with the example codes from the demo. If you’d like to, add one code of your own.</li>
+<li>Open <strong>DollyPartonInterview.pdf</strong>. It’s 2 pages.</li>
+<li>Read it and code passages with the four example codes. If you’d like to, add one code of your own.</li>
 <li>Try coding one passage with two codes, so it’s underlined.</li>
 <li>Pick a passage you’ve coded and add a memo to it (see the next section).</li>
+<li>Finished early? Code some of the Alicia Keys interview, so your reports have more to show.</li>
 </ol>
 </div>
 </div>
 <blockquote class="blockquote">
-<p>What did you notice? Was there a passage that didn’t fit any code, or that fit more than one?</p>
+<p>What did you notice? Was there a passage that didn’t fit any code, or that fit more than one? Did you code the interviewer’s questions, or only the answers?</p>
 </blockquote>
 </section>
 <section id="sec-memos" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-memos"><span class="header-section-number">5.4</span> Memos</h2>
-<p>A memo is a note attached to coded text. After you code a passage, add a memo that sums it up: what about this text helps answer your research question? Later you can run a report of only memos (<a href="#sec-reports" class="quarto-xref">Section 6</a>), which gives you a head start on writing your analysis.</p>
+<p>A memo is a note attached to coded text. After you code a passage, add a memo that sums it up: what about this text helps answer your research question? For example, on a passage coded <em>Inspiration from life</em>: “Turns a painful memory into a song; writing it helped her let go of the hurt.” Later you can run a report of only memos (<a href="#sec-reports" class="quarto-xref">Section 6</a>), which gives you a head start on writing your analysis.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3147,7 +3251,7 @@ Conventions (see CLAUDE.md):
 </section>
 <section id="annotations" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="annotations"><span class="header-section-number">5.5</span> Annotations</h2>
-<p>An annotation explains a piece of text: an acronym, short-hand or a reference a reader wouldn’t know. Unlike a memo, the text doesn’t need to be coded.</p>
+<p>An annotation explains a piece of text: an acronym, short-hand or a reference a reader wouldn’t know. Unlike a memo, the text doesn’t need to be coded. For example, Dolly Parton mentions “Porter”: an annotation can say that’s Porter Wagoner, the country singer she performed with at the time.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3166,7 +3270,7 @@ Conventions (see CLAUDE.md):
 </div>
 </div>
 <div class="placeholder">
-<p><strong>Screenshot: <code>images/annotations.png</code>.</strong> An annotation window open on an acronym in the transcript.</p>
+<p><strong>Screenshot: <code>images/annotations.png</code>.</strong> An annotation window open on “Porter” in the Dolly Parton interview.</p>
 </div>
 </section>
 <section id="reading-the-coding-tab" class="level2" data-number="5.6">
@@ -3198,7 +3302,7 @@ Conventions (see CLAUDE.md):
 </section>
 <section id="sec-reports" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Run reports</h1>
-<p>A report pulls together all the text for the codes and files you choose. This is where coding turns into analysis.</p>
+<p>A report pulls together all the text for the codes and files you choose. This is where coding turns into analysis. Try it with all three interviews and the code <strong>Faith and spirituality</strong>: how does each singer talk about it?</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-group="os">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href>Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href>Windows</a></li></ul>
 <div class="tab-content" data-group="os">
@@ -3395,7 +3499,14 @@ Conventions (see CLAUDE.md):
 <li><a href="https://qualcoder.org/doc/en/">QualCoder documentation</a>: the full manual.</li>
 <li><a href="https://qualcoder.org/doc/en/4.1.-Coding-Text/">Coding text</a> and <a href="https://qualcoder.org/doc/en/5.3.-Reports/">Reports</a> in the documentation.</li>
 <li><a href="https://www.lib.ncsu.edu/dss">NC State University Libraries Data Science Services</a>: book a consultation for help with your project <span class="tbd">confirm link</span>.</li>
+<li>The Library of Congress <a href="https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/index-of-interviews/">index of Recording Registry interviews</a>: more than 100 more interviews with musicians, producers and songwriters to practice on.</li>
 </ul>
+<section id="sec-references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-references">References</h2>
+<p>Library of Congress. (2016, February 19). <em>Interview with Dolly Parton</em> [Interview transcript]. National Recording Preservation Board, National Recording Registry. <a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DollyPartonInterview.pdf" class="uri">https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DollyPartonInterview.pdf</a></p>
+<p>Library of Congress. (2019, May 24). <em>Interview with Cyndi Lauper</em> [Interview transcript]. National Recording Preservation Board, National Recording Registry. <a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CyndiLauperInterview.pdf" class="uri">https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CyndiLauperInterview.pdf</a></p>
+<p>Library of Congress. (2022, April 13). <em>Interview with Alicia Keys</em> [Interview transcript]. National Recording Preservation Board, National Recording Registry. <a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interview_Alicia-Keys.pdf" class="uri">https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interview_Alicia-Keys.pdf</a></p>
+</section>
 </section>
 <section id="sec-extras" class="level1 unnumbered">
 <h1 class="unnumbered">Extra activities</h1>
@@ -3437,6 +3548,58 @@ Conventions (see CLAUDE.md):
 </div>
 </div>
 <p>Each time you open QualCoder, check that you’re in the right project.</p>
+</section>
+<section id="sec-clean" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-clean">Clean a transcript before importing</h2>
+<p>Today’s PDFs have line breaks in the middle of sentences and inconsistent speaker labels. Clean text is easier to read and code, and makes it easier to search for one speaker. Try it on the Dolly Parton interview:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="os">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href>Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href>Windows</a></li></ul>
+<div class="tab-content" data-group="os">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>In TextEdit: make a clean text copy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Open the PDF, select all the text (<strong>Cmd + A</strong>) and copy it (<strong>Cmd + C</strong>).</li>
+<li>Open <strong>TextEdit</strong>, choose <strong>Format &gt; Make Plain Text</strong>, and paste (<strong>Cmd + V</strong>).</li>
+<li>Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a blank line between turns.</li>
+<li>Use the same label for each speaker every time, such as <code>INTERVIEWER:</code> and <code>DOLLY PARTON:</code>.</li>
+<li>Save as <code>DollyParton_clean.txt</code> in <code>qualcoder-workshop/data</code>, with <strong>Unicode (UTF-8)</strong> encoding.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>In Notepad: make a clean text copy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Open the PDF, select all the text (<strong>Ctrl + A</strong>) and copy it (<strong>Ctrl + C</strong>).</li>
+<li>Open <strong>Notepad</strong> and paste (<strong>Ctrl + V</strong>).</li>
+<li>Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a blank line between turns.</li>
+<li>Use the same label for each speaker every time, such as <code>INTERVIEWER:</code> and <code>DOLLY PARTON:</code>.</li>
+<li>Save as <code>DollyParton_clean.txt</code> in <code>qualcoder-workshop\data</code>, with <strong>UTF-8</strong> encoding.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Import the clean copy (<a href="#sec-import" class="quarto-xref">Section 4</a>) and compare it with the PDF version in the Coding tab. Clean your files <em>before</em> you start coding: QualCoder’s <strong>Edit Text</strong> is meant for small fixes only.</p>
 </section>
 <section id="fix-a-typo-in-a-transcript" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="fix-a-typo-in-a-transcript">Fix a typo in a transcript</h2>

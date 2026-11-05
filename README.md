@@ -11,7 +11,8 @@ https://ncsu-libraries.github.io/intro-qualcoder/qualcoder-workshop.html.
 - `qualcoder-workshop.qmd`: the guide we work from in the session. Steps are in purple boxes,
   with tabs where Mac and Windows differ; everything else is explanation.
   `qualcoder-workshop.html` is the rendered, self-contained page.
-- `data/`: the interview transcripts for the session (to come).
+- `data/`: a note on the session's data: three Library of Congress interviews with singers
+  (Dolly Parton, Cyndi Lauper, Alicia Keys), which the guide links to rather than copies.
 - `images/`: our own screenshots of QualCoder, Finder and File Explorer.
 
 Render the guide with `quarto render qualcoder-workshop.qmd`.
