@@ -896,11 +896,15 @@ boxed.
 
 # QualCoder resources {#sec-resources}
 
+::: {.golink}
+[NC State University Libraries Data Science Services: contact us, book an appointment, or
+reserve a workstation (with QualCoder installed!) at]{.golink-label}
+[go.ncsu.edu/getdatahelp](https://go.ncsu.edu/getdatahelp)
+:::
+
 - [QualCoder documentation](https://qualcoder.org/doc/en/): the full manual.
 - [Coding text](https://qualcoder.org/doc/en/4.1.-Coding-Text/) and
   [Reports](https://qualcoder.org/doc/en/5.3.-Reports/) in the documentation.
-- [NC State University Libraries Data Science Services](https://www.lib.ncsu.edu/dss): book a
-  consultation for help with your project [confirm link]{.tbd}.
 - The Library of Congress [index of Recording Registry
   interviews](https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/index-of-interviews/):
   more than 100 more interviews with musicians, producers and songwriters to practice on.
