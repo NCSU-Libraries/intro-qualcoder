@@ -2187,6 +2187,8 @@ padding: 0.75rem 1rem; margin: 0 0 1.5rem; overflow-wrap: anywhere; }
 .golink p { margin: 0; }
 .golink a { color: #7d3a73; }
 .golink .golink-label { display: block; font-size: 1rem; font-weight: 400; color: #212529; }
+
+.golink.golink-left .golink-label { text-align: left; margin-bottom: 0.5rem; }
 table.shortcuts td, table.shortcuts th { text-align: center; }
 
 div.callout.critical { border-left-color: #c62828 !important;
@@ -2356,7 +2358,7 @@ Conventions (see CLAUDE.md):
 <ol type="1">
 <li><strong>See where we’re headed.</strong> We start with a look at a finished project, below.</li>
 <li><strong>Set up a project folder</strong> on your computer and download today’s transcripts into it (<a href="#sec-folders" class="quarto-xref">Section 1</a>).</li>
-<li><strong>Install QualCoder</strong> (<a href="#sec-install" class="quarto-xref">Section 2</a>). Ideally you’ve done this before the session.</li>
+<li><strong>Install QualCoder</strong> (<a href="#sec-install" class="quarto-xref">Section 2</a>).</li>
 <li><strong>Create a QualCoder project</strong>, set your coder name and turn on backups (<a href="#sec-project" class="quarto-xref">Section 3</a>).</li>
 <li><strong>Import transcripts</strong> and describe them with attributes (<a href="#sec-import" class="quarto-xref">Section 4</a>).</li>
 <li><strong>Code</strong>: watch a short demo, then code a transcript yourself for 5 minutes (<a href="#sec-coding" class="quarto-xref">Section 5</a>).</li>
@@ -2368,12 +2370,12 @@ Conventions (see CLAUDE.md):
 <h3 class="unnumbered anchored" data-anchor-id="what-were-not-doing-today">What we’re not doing today</h3>
 <ul>
 <li><strong>We’re not using QualCoder’s AI features.</strong> QualCoder can connect to AI tools, but sending research data to an AI service has IRB implications. Always check with your advisor and your IRB protocol before turning them on.</li>
-<li><strong>We’re not covering how to do qualitative research.</strong> Today is about the software: how to set up a project and use QualCoder’s tools. Designing a study, writing a codebook and choosing an analysis approach are a different workshop: <span class="tbd">link to the research methods workshop</span>.</li>
+<li><strong>We’re not covering how to do qualitative research.</strong> Today is about the software: how to set up a project and use QualCoder’s tools.</li>
 </ul>
 </section>
 <section id="where-were-headed" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="where-were-headed">Where we’re headed</h3>
-<p>By the end of the session you’ll have a project that looks like this: three interviews with singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls together everything you coded in Dolly Parton’s, Cyndi Lauper’s and Alicia Keys’s interviews.</p>
+<p>By the end of the session you’ll have a project that looks like this: three interviews with singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls together everything you coded in the interviews.</p>
 <div class="placeholder">
 <p><strong>Screenshot: <code>images/roadmap-end-result.png</code>.</strong> The Coding tab of a finished workshop project: the codes list on the left with 2–5 codes in their colors, a transcript on the right with several passages highlighted, at least one passage underlined (2+ codes) and one italicized (memo).</p>
 </div>
@@ -2820,7 +2822,7 @@ Conventions (see CLAUDE.md):
 <li>Go to <strong>Qualcoder &gt; Preferences…</strong> (or <strong>Cmd + ,</strong>).</li>
 <li>Click <strong>Default project directory</strong>.</li>
 <li>Go to <code>qualcoder-workshop</code> and click <strong>once</strong> on <code>backups</code> to select it (don’t double-click into it).</li>
-<li>Click <span class="tbd"><strong>Open</strong> or <strong>Choose</strong>; confirm the button name on a Mac</span>.</li>
+<li>Click <strong>Open</strong>.</li>
 <li>Click <strong>OK</strong>.</li>
 </ol>
 </div>
@@ -3588,7 +3590,7 @@ Conventions (see CLAUDE.md):
 </section>
 <section id="sec-resources" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> QualCoder resources</h1>
-<div class="golink">
+<div class="golink golink-left">
 <p><span class="golink-label">NC State University Libraries Data Science Services: contact us, book an appointment, or reserve a workstation (with QualCoder installed!) at</span> <a href="https://go.ncsu.edu/getdatahelp">go.ncsu.edu/getdatahelp</a></p>
 </div>
 <ul>

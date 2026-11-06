@@ -36,6 +36,8 @@ format:
         .golink p { margin: 0; }
         .golink a { color: #7d3a73; }
         .golink .golink-label { display: block; font-size: 1rem; font-weight: 400; color: #212529; }
+        /* In Resources, the description reads left-aligned; only the go link stays centered. */
+        .golink.golink-left .golink-label { text-align: left; margin-bottom: 0.5rem; }
         table.shortcuts td, table.shortcuts th { text-align: center; }
         /* The one Gotcha people must not miss (cloud storage): red instead of orange. */
         div.callout.critical { border-left-color: #c62828 !important;
@@ -95,7 +97,7 @@ catch up if you fall behind, and come back to it later.
 1. **See where we're headed.** We start with a look at a finished project, below.
 2. **Set up a project folder** on your computer and download today's transcripts into it
    (@sec-folders).
-3. **Install QualCoder** (@sec-install). Ideally you've done this before the session.
+3. **Install QualCoder** (@sec-install).
 4. **Create a QualCoder project**, set your coder name and turn on backups (@sec-project).
 5. **Import transcripts** and describe them with attributes (@sec-import).
 6. **Code**: watch a short demo, then code a transcript yourself for 5 minutes (@sec-coding).
@@ -111,15 +113,13 @@ More things to try, including how to work on a project with a team, are in
   research data to an AI service has IRB implications. Always check with your advisor and your
   IRB protocol before turning them on.
 - **We're not covering how to do qualitative research.** Today is about the software: how to
-  set up a project and use QualCoder's tools. Designing a study, writing a codebook and choosing
-  an analysis approach are a different workshop: [link to the research methods
-  workshop]{.tbd}.
+  set up a project and use QualCoder's tools.
 
 ### Where we're headed {.unnumbered}
 
 By the end of the session you'll have a project that looks like this: three interviews with
 singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls
-together everything you coded in Dolly Parton's, Cyndi Lauper's and Alicia Keys's interviews.
+together everything you coded in the interviews.
 
 ::: {.placeholder}
 **Screenshot: `images/roadmap-end-result.png`.** The Coding tab of a finished workshop project:
@@ -466,7 +466,7 @@ QualCoder can keep backups of your project for you. Point it at the `backups` fo
 2. Click **Default project directory**.
 3. Go to `qualcoder-workshop` and click **once** on `backups` to select it (don't double-click
    into it).
-4. Click [**Open** or **Choose**; confirm the button name on a Mac]{.tbd}.
+4. Click **Open**.
 5. Click **OK**.
 :::
 
@@ -955,7 +955,7 @@ the **Project backup created** line boxed. Crop it so no username shows in the p
 
 # QualCoder resources {#sec-resources}
 
-::: {.golink}
+::: {.golink .golink-left}
 [NC State University Libraries Data Science Services: contact us, book an appointment, or
 reserve a workstation (with QualCoder installed!) at]{.golink-label}
 [go.ncsu.edu/getdatahelp](https://go.ncsu.edu/getdatahelp)
