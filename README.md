@@ -1,9 +1,10 @@
 # Introduction to QualCoder
 
 Materials for NC State University Libraries' Introduction to QualCoder (Data Science Services), a
-1-hour hands-on session. Attendees install [QualCoder](https://qualcoder.org/), a free,
-open-source program for qualitative data analysis, set up a project folder and a QualCoder
-project, import interview transcripts, code them, add memos and annotations, and run reports.
+1-hour hands-on session. Attendees set up a project folder, install
+[QualCoder](https://qualcoder.org/), a free, open-source program for qualitative data analysis,
+create a QualCoder project, import interview transcripts, code them, add memos and annotations,
+and run reports.
 
 The guide is for QualCoder version 3.8.2. It's online at
 https://ncsu-libraries.github.io/intro-qualcoder/qualcoder-workshop.html.

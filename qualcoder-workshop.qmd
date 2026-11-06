@@ -29,8 +29,6 @@ format:
         /* Mac / Windows tabs: purple active tab. */
         .panel-tabset .nav-tabs .nav-link.active { color: #7d3a73; border-top: 3px solid #B453A6; }
         .panel-tabset .nav-tabs .nav-link { color: #495057; }
-        /* Folder layout diagram. */
-        pre.folders { background: #f8f9fa; border-left: 4px solid #B453A6; padding: 0.75rem 1rem; }
         /* The short link to this guide, at the top of the page. */
         .golink { text-align: center; font-size: 1.5rem; font-weight: 600; color: #7d3a73;
           background: #f6eaf4; border: 2px solid #B453A6; border-radius: 6px;
@@ -39,6 +37,12 @@ format:
         .golink a { color: #7d3a73; }
         .golink .golink-label { display: block; font-size: 1rem; font-weight: 400; color: #212529; }
         table.shortcuts td, table.shortcuts th { text-align: center; }
+        /* The one Gotcha people must not miss (cloud storage): red instead of orange. */
+        div.callout.critical { border-left-color: #c62828 !important;
+          border-left-width: 6px !important; }
+        div.callout.critical > .callout-header { background-color: #fdecea !important; }
+        div.callout.critical .callout-title-container { color: #9b1c1c; font-weight: 700; }
+        div.callout.critical .callout-icon::before { filter: hue-rotate(-35deg) saturate(1.6); }
         </style>
 ---
 
@@ -72,10 +76,9 @@ catch up if you fall behind, and come back to it later.
   (Mac), *In File Explorer* (Windows) or *In QualCoder*. Everything outside a box explains what
   the steps do.
 - **Mac and Windows steps are in tabs.** Where the two differ, pick your system's tab once and
-  every tab on the page switches to match. Screenshots outside the tabs are from Windows; on a
-  Mac, QualCoder's menus are in the menu bar at the top of the screen [confirm]{.tbd}.
+  every tab on the page switches to match.
 - **This guide is for QualCoder version 3.8.2.** There is a version 4.0, but it is very new and
-  many of its menus have changed.
+  some of its menus have changed.
 :::
 
 # Welcome {.unnumbered}
@@ -90,13 +93,14 @@ catch up if you fall behind, and come back to it later.
 ## Roadmap for today {#sec-roadmap .unnumbered}
 
 1. **See where we're headed.** We start with a look at a finished project, below.
-2. **Install QualCoder** (@sec-install). Ideally you've done this before the session.
-3. **Set up a project folder** on your computer (@sec-folders).
+2. **Set up a project folder** on your computer and download today's transcripts into it
+   (@sec-folders).
+3. **Install QualCoder** (@sec-install). Ideally you've done this before the session.
 4. **Create a QualCoder project**, set your coder name and turn on backups (@sec-project).
 5. **Import transcripts** and describe them with attributes (@sec-import).
 6. **Code**: watch a short demo, then code a transcript yourself for 5 minutes (@sec-coding).
 7. **Run reports** of coded text and memos (@sec-reports).
-8. **Close the project** (@sec-close).
+8. **Close the project**, then reopen it to find your first backup (@sec-close).
 
 More things to try, including how to work on a project with a team, are in
 [Extra activities](#sec-extras).
@@ -115,7 +119,7 @@ More things to try, including how to work on a project with a team, are in
 
 By the end of the session you'll have a project that looks like this: three interviews with
 singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls
-together everything Dolly Parton, Cyndi Lauper and Alicia Keys said about one idea.
+together everything you coded in Dolly Parton's, Cyndi Lauper's and Alicia Keys's interviews.
 
 ::: {.placeholder}
 **Screenshot: `images/roadmap-end-result.png`.** The Coding tab of a finished workshop project:
@@ -124,138 +128,20 @@ passages highlighted, at least one passage underlined (2+ codes) and one italici
 :::
 
 ::: {.placeholder}
-**Screenshot: `images/roadmap-end-report.png`.** A report of coded text for one code across 2–3
-transcripts, with memos included.
+**Screenshot: `images/roadmap-end-report.png`.** A report of all the codes in all three
+transcripts, with memos included. (Take both after the demo transcripts have been coded.)
 :::
 
 ------------------------------------------------------------------------
 
-# Install QualCoder {#sec-install}
-
-QualCoder is free, open-source software for qualitative data analysis. It runs on your own
-computer, so your data stays with you. If you installed it before the session, check that it
-opens and skip ahead to @sec-folders.
-
-::: callout-warning
-## Gotcha: the newest QualCoder is 4.0, but we use 3.8.2
-
-QualCoder 4.0 came out in October 2026, so the website's "latest release" link now gives you
-4.0. Its menus differ from this guide. Use the direct download links below to get 3.8.2.
-:::
-
-::: {.panel-tabset group="os"}
-
-### Mac
-
-::: callout-note
-## In your browser and Finder: install on a Mac
-
-1. Download
-   [QualCoder_3_8_2_macOs_arm64.dmg](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_macOs_arm64.dmg)
-   (547 MB).
-2. Open the downloaded file from your **Downloads** folder.
-3. [Drag **QualCoder** into your **Applications** folder]{.tbd}.
-4. Open QualCoder from **Applications**. If your Mac says it can't check the app for malicious
-   software, go to **System Settings > Privacy & Security**, scroll down and click
-   **Open Anyway** [confirm the exact message and steps]{.tbd}.
-:::
-
-::: {.placeholder}
-**Screenshot: `images/install-open-anyway-mac.png`.** System Settings > Privacy & Security with
-the **Open Anyway** button boxed (only if this message appears).
-:::
-
-::: callout-warning
-## Gotcha: 3.8.2 is for Apple silicon Macs only
-
-The 3.8.2 Mac download runs only on Macs with Apple silicon (M1 or later). To check yours, open
-the **Apple menu > About This Mac**: it lists a **Chip** (Apple M1, M2, ...) or a **Processor**
-(Intel). There's no Intel version of 3.8.2; the most recent Intel Mac version is
-[3.7](https://github.com/ccbogel/QualCoder/releases/tag/3.7)
-(`QualCoder.3.7.Mac.X86.dmg`), and some menus may differ from this guide.
-:::
-
-### Windows
-
-::: callout-note
-## In your browser and File Explorer: install on Windows
-
-1. Download
-   [QualCoder_3_8_2_Win_setup.exe](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_Win_setup.exe)
-   (246 MB).
-2. Find the setup wizard in your **Downloads** folder and double-click it to start.
-3. When asked, choose **Download only for me** [confirm the exact wording]{.tbd}. On university
-   computers you can't install it for all users.
-4. Let the setup wizard open QualCoder when the installation is complete.
-:::
-
-![The setup wizard in the Downloads folder.](images/install-downloads-win.png){fig-alt="File Explorer's Downloads folder, under Today, showing a file named QualCoder_3_8_2_Win_setup."}
-
-::: {.placeholder}
-**Screenshot: `images/install-only-for-me-win.png`.** The setup wizard step with "only for me"
-selected.
-:::
-
-::: callout-tip
-## Extra: no permission to install software?
-
-There's also a portable version,
-[QualCoder_3_8_2_Win_Portable.exe](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_Win_Portable.exe),
-which runs without installing [confirm it runs on a university-managed computer]{.tbd}.
-:::
-
-:::
-
-## Where to find it on the QualCoder website
-
-The download links above come from QualCoder's release page on GitHub. To find them yourself, or
-to check for newer versions later:
-
-::: callout-note
-## In your browser: find a release on the QualCoder website
-
-1. Go to the [QualCoder installation page](https://qualcoder.org/doc/en/2.1.-Installation/).
-2. Click your system's tab, then the **latest release** link. This opens QualCoder's releases on
-   GitHub.
-3. For 3.8.2, go to the [3.8.2 release
-   page](https://github.com/ccbogel/QualCoder/releases/tag/3.8.2) instead (or scroll down the
-   list of releases to it).
-4. Scroll down to **Assets** and click the package for your system.
-:::
-
-![The installation page has a tab for each system, each with a link to the latest release.](images/install-website.png){fig-alt="Two tabs, Windows and MacOS, with the Windows tab selected. Below them: Pick the latest release, with latest release as a link."}
-
-![The Assets list on the 3.8.2 release page: the Mac package ends in macOs_arm64.dmg, the Windows installer in Win_setup.exe.](images/install-assets.png){fig-alt="The Assets section of a GitHub release, showing six files: QualCoder_3_8_2_macOs_arm64.dmg (547 MB), QualCoder_3_8_2_ubuntu (480 MB), QualCoder_3_8_2_Win_Portable.exe (349 MB), QualCoder_3_8_2_Win_setup.exe (246 MB), and the source code as zip and tar.gz."}
-
-::: callout-note
-## In QualCoder: the first time it opens
-
-1. Wait. QualCoder is not very quick to open.
-2. When it asks whether you want to set up AI, click **No**. You can always set it up later.
-:::
-
-::: {.placeholder}
-**Screenshot: `images/install-ai-prompt.png`.** The AI setup question QualCoder shows on first
-launch, with **No** boxed. (If it looks the same on both systems, one screenshot is enough.)
-:::
-
 # Set up your project folder {#sec-folders}
 
-Before you open QualCoder, decide where your project will live and make a folder for it. A
+Before you install QualCoder, decide where your project will live and make a folder for it. A
 QualCoder project is a folder ending in `.qda` that holds a database of your codes, memos and
 copies of your files. Keeping it in a folder of its own, next to your original data and your
 backups, makes the project easy to find, copy and hand on.
 
-We'll build this layout:
-
-```{.folders}
-qualcoder-workshop/          <- your project folder (you make this)
-├── data/                    <- your original interview files (you make this)
-├── backups/                 <- QualCoder's automatic backups (you make this)
-└── intro_qc_workshop.qda/   <- the QualCoder project (QualCoder makes this in section 3)
-```
-
-::: callout-warning
+::: {.callout-warning .critical}
 ## Gotcha: don't use cloud storage for the project folder
 
 Don't put the project folder in OneDrive, Google Drive, Dropbox, Box or iCloud. QualCoder keeps
@@ -266,6 +152,12 @@ Watch out for folders that sync without you noticing: on a Mac, **Desktop** and 
 may be synced to iCloud; on Windows, they may be synced to OneDrive. Your home folder is usually
 a safe place. Back up by copying the closed project somewhere else, not by syncing it.
 :::
+
+You'll make a folder called `qualcoder-workshop` with two folders inside it: `data`, for your
+original interview files, and `backups`, for QualCoder's automatic backups. Later, QualCoder adds
+the project itself, `intro-qc-workshop.qda`, next to them (@sec-project).
+
+![The finished project folder (shown on a Mac).](images/folders-finder-mac.png){fig-alt="A Finder window titled qualcoder-workshop, in list view, containing two folders: backups and data." width="70%"}
 
 ::: {.panel-tabset group="os"}
 
@@ -280,11 +172,6 @@ a safe place. Back up by copying the closed project somewhere else, not by synci
 3. Open `qualcoder-workshop` and make two folders inside it: `data` and `backups`.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/folders-finder-mac.png`.** Finder showing the `qualcoder-workshop` folder
-in the home folder, with `data` and `backups` inside it.
-:::
-
 ### Windows
 
 ::: callout-note
@@ -297,16 +184,11 @@ in the home folder, with `data` and `backups` inside it.
 3. Open `qualcoder-workshop` and make two folders inside it: `data` and `backups`.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/folders-explorer-win.png`.** File Explorer showing the
-`qualcoder-workshop` folder in the user folder, with `data` and `backups` inside it.
-:::
-
 :::
 
 ## Get today's transcripts {#sec-data}
 
-Today we code three interviews with singers, from the Library of Congress. Each was done when one
+Today we'll code three interviews with singers, from the Library of Congress. Each was done when one
 of the singer's recordings was added to the [National Recording
 Registry](https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/),
 and each singer answers similar questions: where the songs came from, how the record got made and
@@ -347,8 +229,8 @@ PDFs, every line ends in a line break, even mid-sentence; the interviewer is lab
 "Library of Congress" or "LC"; and the editors added notes in [square brackets]. Ideally,
 transcripts are **clean** before you import them: speaker labels consistent, typos fixed, and
 names and identifying details removed if the participants were promised confidentiality. Today
-we import the PDFs as they are; see [Clean a transcript before importing](#sec-clean) for how to
-tidy one up. QualCoder imports plain text (`.txt`), Word (`.docx`) and PDF files.
+we import the PDFs as they are. QualCoder imports plain text (`.txt`), Word (`.docx`) and PDF
+files.
 
 ::: callout-tip
 ## Extra: who owns an interview?
@@ -359,13 +241,121 @@ That's why this guide links to the Library's copies instead of handing out its o
 reuse someone else's interviews in your research, check the license and the terms of use first.
 :::
 
-# Create a QualCoder project {#sec-project}
+# Install QualCoder {#sec-install}
+
+QualCoder is free, open-source software for qualitative data analysis. It runs on your own
+computer, so your data stays with you. If you installed it before the session, check that it
+opens and skip ahead to @sec-project.
 
 ::: callout-warning
-## Gotcha: only one person can be in a project at a time
+## Gotcha: the newest QualCoder is 4.0, but we use 3.8.2
 
-A QualCoder project can't be opened by two people at once. If you're working with a team, decide
-how you'll share the work before you start. See [Working as a team](#sec-team).
+QualCoder 4.0 came out in October 2026, so QualCoder's website now offers 4.0, and its menus
+differ from this guide. Use the download links below to get 3.8.2.
+:::
+
+::: {.panel-tabset group="os"}
+
+### Mac
+
+::: callout-note
+## In your browser and Finder: install on a Mac
+
+1. Download
+   [QualCoder_3_8_2_macOs_arm64.dmg](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_macOs_arm64.dmg)
+   (547 MB).
+2. Open the downloaded file from your **Downloads** folder.
+3. [Drag **QualCoder** into your **Applications** folder]{.tbd}.
+4. Open QualCoder from **Applications**. If your Mac says it can't check the app for malicious
+   software, go to **System Settings > Privacy & Security**, scroll down and click
+   **Open Anyway** [confirm the exact message and steps]{.tbd}.
+:::
+
+::: {.placeholder}
+**Screenshot: `images/install-downloads-mac.png`.** The downloaded `.dmg` file in the
+**Downloads** folder.
+:::
+
+::: {.placeholder}
+**Screenshot: `images/install-applications-mac.png`.** The window that opens from the `.dmg`,
+showing QualCoder and the Applications folder (dragging QualCoder into Applications).
+:::
+
+::: {.placeholder}
+**Screenshot: `images/install-open-anyway-mac.png`.** System Settings > Privacy & Security with
+the **Open Anyway** button boxed (only if this message appears).
+:::
+
+::: callout-warning
+## Gotcha: 3.8.2 is for Apple silicon Macs only
+
+The 3.8.2 Mac download runs only on Macs with Apple silicon (M1 or later). To check yours, open
+the **Apple menu > About This Mac**: it lists a **Chip** (Apple M1, M2, ...) or a **Processor**
+(Intel). There's no Intel version of 3.8.2; the most recent Intel Mac version is
+[3.7](https://github.com/ccbogel/QualCoder/releases/tag/3.7)
+(`QualCoder.3.7.Mac.X86.dmg`), and some menus may differ from this guide.
+:::
+
+### Windows
+
+::: callout-note
+## In your browser and File Explorer: install on Windows
+
+1. Download
+   [QualCoder_3_8_2_Win_setup.exe](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_Win_setup.exe)
+   (246 MB).
+2. Find the setup wizard in your **Downloads** folder and double-click it to start.
+3. When asked, choose **Download only for me** [confirm the exact wording]{.tbd}. On university
+   computers you can't install it for all users.
+4. [Click through the rest of the wizard: list each button, such as **Next**, **Install** and
+   **Finish**]{.tbd}.
+5. Let the setup wizard open QualCoder when the installation is complete.
+:::
+
+![The setup wizard in the Downloads folder.](images/install-downloads-win.png){fig-alt="File Explorer's Downloads folder, under Today, showing a file named QualCoder_3_8_2_Win_setup."}
+
+::: {.placeholder}
+**Screenshot: `images/install-only-for-me-win.png`.** The setup wizard step with "only for me"
+selected.
+:::
+
+::: {.placeholder}
+**Screenshots: `images/install-wizard-1-win.png`, `install-wizard-2-win.png`, ...** One for
+each later step of the setup wizard, with the button to click boxed, ending with the last
+screen (**Finish**, with the option to open QualCoder).
+:::
+
+:::
+
+## The first time QualCoder opens
+
+::: callout-note
+## In QualCoder: the first time it opens
+
+1. Wait. QualCoder is not very quick to open.
+2. When it asks whether you want to set up AI, click **No**. You can always set it up later.
+:::
+
+::: {.placeholder}
+**Screenshot: `images/install-ai-prompt.png`.** The AI setup question QualCoder shows on first
+launch, with **No** boxed. (If it looks the same on both systems, one screenshot is enough.)
+:::
+
+# Create a QualCoder project {#sec-project}
+
+## Menus and tabs
+
+QualCoder has two ways to get around, and this guide uses both:
+
+- **The top menu**: **Project**, **Manage**, **Coding**, **Reports**, **AI** and **Help**. On a
+  Mac, it's in the menu bar at the top of the screen, after the **Qualcoder** menu. On Windows,
+  it's at the top of the QualCoder window.
+- **The tabs** inside the QualCoder window: **Action Log**, **Manage**, **Coding**, **Reports**
+  and **AI Chat**. Choosing an item from the top menu often opens one of these tabs.
+
+::: {.placeholder}
+**Screenshot: `images/project-menus-tabs.png`.** The top of the QualCoder window with the top
+menu and the tabs each boxed and labeled, so the two are easy to tell apart.
 :::
 
 ## Create the project
@@ -374,18 +364,20 @@ how you'll share the work before you start. See [Working as a team](#sec-team).
 
 ### Mac
 
+![](images/project-create-menu-mac.png){fig-alt="QualCoder's Project menu open in the Mac menu bar, with Create New Project (Command N) highlighted, above Open Project, Open Recent Project, Close Project (Option X), Project Memo, Project summary, Import and Export. Behind it is the QualCoder window with its tabs: Manage, Coding, Reports and AI Chat."}
+
 ::: callout-note
 ## In QualCoder: create a new project
 
-1. Go to **Project > Create New Project**.
+1. Go to **Project > Create New Project** (or **Cmd + N**).
 2. In the save window, go to your `qualcoder-workshop` folder.
-3. Name the project `intro_qc_workshop` and click **Save**. QualCoder adds `.qda` to the name.
+3. Name the project `intro-qc-workshop` and click **Save**. QualCoder adds `.qda` to the name.
 4. The project opens right away in QualCoder.
 :::
 
 ::: {.placeholder}
 **Screenshot: `images/project-create-mac.png`.** The Mac save window, inside
-`qualcoder-workshop`, with the name `intro_qc_workshop` typed in.
+`qualcoder-workshop`, with the name `intro-qc-workshop` typed in.
 :::
 
 ### Windows
@@ -397,13 +389,13 @@ how you'll share the work before you start. See [Working as a team](#sec-team).
 
 1. Go to **Project > Create New Project** (or **Ctrl + N**).
 2. In the save window, go to your `qualcoder-workshop` folder.
-3. Name the project `intro_qc_workshop` and click **Save**. QualCoder adds `.qda` to the name.
+3. Name the project `intro-qc-workshop` and click **Save**. QualCoder adds `.qda` to the name.
 4. The project opens right away in QualCoder.
 :::
 
 ::: {.placeholder}
 **Screenshot: `images/project-create-win.png`.** The Windows save window, inside
-`qualcoder-workshop`, with the name `intro_qc_workshop` typed in.
+`qualcoder-workshop`, with the name `intro-qc-workshop` typed in.
 :::
 
 :::
@@ -411,7 +403,8 @@ how you'll share the work before you start. See [Working as a team](#sec-team).
 ## Set your coder name
 
 QualCoder records who coded each passage. Set your name now, so your codes are labeled with it.
-This matters most on a team, where reports can be filtered by coder.
+This is especially important when you check coding between coders or team members, to make sure
+codes are applied consistently.
 
 ::: {.panel-tabset group="os"}
 
@@ -420,18 +413,19 @@ This matters most on a team, where reports can be filtered by coder.
 ::: callout-note
 ## In QualCoder: set your coder name
 
-1. Open the settings: [**Project > Settings** or **QualCoder > Settings** on a Mac; confirm
-   which]{.tbd}.
+1. Go to **Qualcoder > Preferences...** (or **Cmd + ,**). On a Mac, the settings are in the
+   **Qualcoder** menu, not the **Project** menu.
 2. Next to **Current coder**, click **Change**.
 3. Click **New**, type your coder name and click **OK**.
 4. Make sure your coder name has a check mark next to it.
 5. Click **OK**.
 :::
 
+![On a Mac, the settings are under Preferences in the Qualcoder menu.](images/project-settings-menu-mac.png){fig-alt="The Qualcoder menu open in the Mac menu bar, with Preferences (Command comma) highlighted. The menu also lists About Qualcoder, Services, Hide Qualcoder, Hide Others, Show All and Quit Qualcoder (Command Q)."}
+
 ::: {.placeholder}
 **Screenshot: `images/project-settings-mac.png`.** The Settings window on a Mac with
-**Current coder** and **Change** boxed. Include the menu that opens it if it's in a different
-place from Windows.
+**Current coder** and **Change** boxed. (Skip this if it looks the same as the Windows one.)
 :::
 
 ### Windows
@@ -468,7 +462,7 @@ QualCoder can keep backups of your project for you. Point it at the `backups` fo
 ::: callout-note
 ## In QualCoder: set the backup folder
 
-1. Open the settings again (the same menu as before).
+1. Go to **Qualcoder > Preferences...** (or **Cmd + ,**).
 2. Click **Default project directory**.
 3. Go to `qualcoder-workshop` and click **once** on `backups` to select it (don't double-click
    into it).
@@ -503,7 +497,8 @@ selected and **Select Folder** boxed.
 
 QualCoder makes a backup each time you open the project and keeps up to 5 backups in this folder.
 When it saves a new one, it deletes the oldest. Backups are folders named like
-`intro_qc_workshop_BKUP_<date>.qda`.
+`intro-qc-workshop_BKUP_<date>_<hour>.qda`. Your first one appears the next time you open the
+project; you'll see it at the end of the session (@sec-close).
 
 ## Confirm your settings
 
@@ -576,7 +571,6 @@ shows these PDFs in the Coding tab]{.tbd}.
 
 Attributes describe your files: for example, the participant's role, the interview date or the
 site. They help you keep track of which file is which, and you can use them to filter reports.
-They're especially useful on a team.
 
 We'll add two attributes to the interviews: the singer's **Genre** (text) and the **Year** of the
 recording (a number).
@@ -708,9 +702,6 @@ or category, or delete it.
 5. Finished early? Code some of the Alicia Keys interview, so your reports have more to show.
 :::
 
-> What did you notice? Was there a passage that didn't fit any code, or that fit more than one?
-> Did you code the interviewer's questions, or only the answers?
-
 ## Memos {#sec-memos}
 
 A memo is a note attached to coded text. After you code a passage, add a memo that sums it up:
@@ -755,7 +746,7 @@ the time.
 Parton interview.
 :::
 
-## Reading the coding tab
+## What the formatting means
 
 | What you see | What it means |
 |--------------|---------------|
@@ -769,21 +760,22 @@ used by a code; hover over one to see which.
 
 # Run reports {#sec-reports}
 
-A report pulls together all the text for the codes and files you choose. This is where coding
-turns into analysis. Try it with all three interviews and the code **Faith and spirituality**:
-how does each singer talk about it?
+A report pulls together all the text for the codes and files you choose. We'll start with
+everything: all the codes in all three interviews. Then we'll add memos to the report.
 
 ::: {.panel-tabset group="os"}
 
 ### Mac
 
 ::: callout-note
-## In QualCoder: report coded text
+## In QualCoder: report all your coded text
 
 1. In the top menu, click **Reports > Coding reports** [confirm the menu path]{.tbd}.
-2. Select the transcript(s) to include. To pick several, drag, or hold **Cmd** and click.
-3. Select the code(s) to include, the same way.
-4. Click the large **Play** button at the top.
+2. Select all three transcripts: click the first, then hold **Shift** and click the last. (To
+   pick only some, hold **Cmd** and click each one.)
+3. Select all the codes, the same way.
+4. Leave the memo drop-down at **None**.
+5. Click the large **Play** button at the top.
 :::
 
 ::: {.placeholder}
@@ -794,12 +786,14 @@ selected and the **Play** button boxed.
 ### Windows
 
 ::: callout-note
-## In QualCoder: report coded text
+## In QualCoder: report all your coded text
 
 1. In the top menu, click **Reports > Coding reports** [confirm the menu path]{.tbd}.
-2. Select the transcript(s) to include. To pick several, drag, or hold **Ctrl** and click.
-3. Select the code(s) to include, the same way.
-4. Click the large **Play** button at the top.
+2. Select all three transcripts: click the first, then hold **Shift** and click the last. (To
+   pick only some, hold **Ctrl** and click each one.)
+3. Select all the codes, the same way.
+4. Leave the memo drop-down at **None**.
+5. Click the large **Play** button at the top.
 :::
 
 ::: {.placeholder}
@@ -811,21 +805,36 @@ selected and the **Play** button boxed.
 
 ## Include memos, or only memos
 
-::: callout-note
-## In QualCoder: add memos to a report
+The memo drop-down (it says **None** to start) decides whether memos are in the report. There are
+two kinds of memo: memos on **coded text**, like the summaries you wrote today, and memos on
+**codes** themselves (right-click a code, **View or edit memo**), which work like a codebook to
+remind you what each code means.
 
-1. Select the transcripts and codes as before.
-2. Click the drop-down that says **None**.
-3. Choose **Also coded memos** to show memos with the coded text, or **Only coded memos** to show
-   just the memos.
-4. Click **Play**.
-:::
+| Choose | The report shows |
+|--------|------------------|
+| **None** | All the coded text, no memos. |
+| **Also code memos** | All the coded text, plus the memos on your codes. |
+| **Also coded memos** | All the coded text, plus the memos on coded text: the summaries that give you a head start on analysis. |
+| **Also all memos** | All the coded text, plus both kinds of memo. |
+| **Only memos** | Both kinds of memo, and no coded text. |
+| **Only coded memos** | Only the memos on coded text, and no coded text. |
 
 ![The memo options in a coding report.](images/reports-memos.png){fig-alt="The Reports tab with Coding report at the top. A drop-down is open with six options: None (selected), Also code memos, Also coded memos, Also all memos, Only memos and Only coded memos. File names are listed on the left." width="60%"}
 
-The list has more choices. *Coded memos* are the memos on coded text that we wrote today; *code
-memos* are memos on the codes themselves (right-click a code, **View or edit memo**). The
-**all memos** and **Only memos** options include both [confirm]{.tbd}.
+::: callout-note
+## In QualCoder: add your memos to the report
+
+1. Keep all the transcripts and codes selected.
+2. In the memo drop-down, choose **Also coded memos**.
+3. Click **Play**. Your memos now appear with the text they're attached to.
+:::
+
+::: callout-note
+## In QualCoder: report only your memos
+
+1. In the memo drop-down, choose **Only coded memos**.
+2. Click **Play**. The report now lists just your memos: a first draft of your analysis notes.
+:::
 
 ## A codes-by-file matrix
 
@@ -834,7 +843,7 @@ A matrix shows which codes appear in which files: codes are columns and files ar
 ::: callout-note
 ## In QualCoder: make a matrix
 
-1. Select the transcripts and codes.
+1. Keep all the transcripts and codes selected, and set the memo drop-down back to **None**.
 2. In the drop-down next to the **Play** button, choose **Codes by file**.
 3. Click **Play**. To swap rows and columns, check **Transpose matrix**.
 :::
@@ -845,11 +854,14 @@ A matrix shows which codes appear in which files: codes are columns and files ar
 **Screenshot: `images/reports-matrix.png`.** A codes-by-file matrix for today's transcripts.
 :::
 
-::: callout-tip
-## Extra: report one coder's work
+## Try other reports
 
-On a team, choose a name from the **Coder** drop-down (top left of the report window) to see only
-what that person coded.
+To get a different report, change what's selected and click **Play** again.
+
+::: {.placeholder}
+**Screenshot: `images/reports-options.png`.** The whole report window with each setting boxed and
+labeled: the file list, the code list, the memo drop-down, the matrix drop-down and the **Play**
+button.
 :::
 
 QualCoder has many other report formats and settings. See the
@@ -865,15 +877,18 @@ shared computer or a shared drive, nobody else can open it until you close it. C
 sure everything is saved before you copy the folder anywhere.
 :::
 
+## Close the project
+
 ::: {.panel-tabset group="os"}
 
 ### Mac
 
 ::: callout-note
-## In QualCoder: close the project and quit
+## In QualCoder: close the project
 
-1. Go to **Project > Close Project**.
-2. Quit QualCoder: [**QualCoder > Quit QualCoder** or **Cmd + Q**; confirm]{.tbd}.
+1. Go to **Project > Close Project** (or **Option + X**).
+2. Click the **Action Log** tab. It lists what changed in this session and ends with
+   **Closing project**.
 :::
 
 ::: {.placeholder}
@@ -884,13 +899,57 @@ boxed.
 ### Windows
 
 ::: callout-note
+## In QualCoder: close the project
+
+1. Go to **Project > Close Project** (or **Alt + X**).
+2. Click the **Action Log** tab. It lists what changed in this session and ends with
+   **Closing project**.
+:::
+
+![Close Project is in the Project menu.](images/close-project.png){fig-alt="QualCoder's Project menu open with Close Project (Alt+X) boxed in red. Exit (Ctrl+Q) is at the bottom of the menu." width="50%"}
+
+:::
+
+## Reopen the project and find your backup
+
+QualCoder makes a backup when you open a project, so reopening it now creates your first backup
+in the `backups` folder.
+
+::: callout-note
+## In QualCoder: reopen the project
+
+1. Go to **Project > Open Recent Project** and choose `intro-qc-workshop.qda`.
+2. Click the **Action Log** tab. Look for **Project backup created**, followed by the backup's
+   location in `qualcoder-workshop/backups` and its name, such as
+   `intro-qc-workshop_BKUP_20261106_10.qda` (the date and the hour).
+:::
+
+::: {.placeholder}
+**Screenshot: `images/close-backup-log.png`.** The Action Log after reopening the project, with
+the **Project backup created** line boxed. Crop it so no username shows in the path.
+:::
+
+## Close it again and quit
+
+::: {.panel-tabset group="os"}
+
+### Mac
+
+::: callout-note
+## In QualCoder: close the project and quit
+
+1. Go to **Project > Close Project** (or **Option + X**).
+2. Quit QualCoder: **Qualcoder > Quit Qualcoder** (or **Cmd + Q**).
+:::
+
+### Windows
+
+::: callout-note
 ## In QualCoder: close the project and exit
 
 1. Go to **Project > Close Project** (or **Alt + X**).
 2. Exit QualCoder: **Project > Exit** (or **Ctrl + Q**).
 :::
-
-![Close Project is in the Project menu.](images/close-project.png){fig-alt="QualCoder's Project menu open with Close Project (Alt+X) boxed in red. Exit (Ctrl+Q) is at the bottom of the menu." width="50%"}
 
 :::
 
@@ -930,8 +989,8 @@ project, or come back to them when you start your own.
 
 ## Working as a team {#sec-team .unnumbered}
 
-Only one person can be in a QualCoder project at a time, so decide **how** you'll work together
-before you create the project.
+A QualCoder project can't be opened by two people at once, so decide **how** you'll work
+together before you create the project.
 
 **Working one at a time (sequentially).** Only one person works on the project at any moment.
 Either:
@@ -947,13 +1006,14 @@ Either:
 - Ideally, agree on the codes before you start. It's fine if you don't, but then documenting your
   codes is extra important.
 - You can share project folders with each other when you want to.
-- At the end, merge the projects into one master project [add the steps for merging, from the
-  QualCoder documentation]{.tbd}.
 
 Either way, agree as a team on where project files will live and how to name each person's
 project folder. If the team has several deliverables, a subfolder per deliverable helps. Set a
-different coder name for each person (@sec-project), so reports can be run per coder, and keep a
-shared list of which color goes with which code.
+different coder name for each person (@sec-project), and keep a shared list of which color goes
+with which code.
+
+To see what one person coded, run a report (@sec-reports) and choose their name from the
+**Coder** drop-down at the top left of the report window.
 
 ## Open an existing project {.unnumbered}
 
@@ -969,45 +1029,6 @@ QualCoder may open your most recent project when it starts. If it doesn't:
 
 Each time you open QualCoder, check that you're in the right project.
 
-## Clean a transcript before importing {#sec-clean .unnumbered}
-
-Today's PDFs have line breaks in the middle of sentences and inconsistent speaker labels. Clean
-text is easier to read and code, and makes it easier to search for one speaker. Try it on the
-Dolly Parton interview:
-
-::: {.panel-tabset group="os"}
-### Mac
-
-::: callout-note
-## In TextEdit: make a clean text copy
-
-1. Open the PDF, select all the text (**Cmd + A**) and copy it (**Cmd + C**).
-2. Open **TextEdit**, choose **Format > Make Plain Text**, and paste (**Cmd + V**).
-3. Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a
-   blank line between turns.
-4. Use the same label for each speaker every time, such as `INTERVIEWER:` and `DOLLY PARTON:`.
-5. Save as `DollyParton_clean.txt` in `qualcoder-workshop/data`, with **Unicode (UTF-8)**
-   encoding.
-:::
-
-### Windows
-
-::: callout-note
-## In Notepad: make a clean text copy
-
-1. Open the PDF, select all the text (**Ctrl + A**) and copy it (**Ctrl + C**).
-2. Open **Notepad** and paste (**Ctrl + V**).
-3. Join each answer back into one paragraph: delete the line breaks inside sentences, and keep a
-   blank line between turns.
-4. Use the same label for each speaker every time, such as `INTERVIEWER:` and `DOLLY PARTON:`.
-5. Save as `DollyParton_clean.txt` in `qualcoder-workshop\data`, with **UTF-8** encoding.
-:::
-
-:::
-
-Import the clean copy (@sec-import) and compare it with the PDF version in the Coding tab. Clean
-your files *before* you start coding: QualCoder's **Edit Text** is meant for small fixes only.
-
 ## Fix a typo in a transcript {.unnumbered}
 
 If you spot an error in a transcript (for example, "force plan" where the speaker said "forest
@@ -1022,7 +1043,7 @@ plan"), you can fix it in QualCoder.
 :::
 
 The change is made only in the project's copy of the transcript; the original file isn't
-changed.
+changed. For anything bigger, clean the file (in Word, for example) *before* you import it.
 
 ![The Edit Text button in the Coding tab's toolbar.](images/extra-edit-text-button.png){fig-alt="The Coding tab's toolbar. A button showing a page with a pencil is boxed in red, next to a 0 / 0 counter, an undo button and a color palette button."}
 
