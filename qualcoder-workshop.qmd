@@ -17,6 +17,8 @@ format:
         .placeholder { border: 2px dashed #b45309; background: #fff7ed; color: #431407;
           padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 4px; }
         .tbd { background: #fef3c7; padding: 0 0.2em; }
+        /* Screenshots we suggest not taking (or keeping), pending a decision with Nina. */
+        .placeholder.skip { border-color: #9ca3af; background: #f3f4f6; color: #374151; }
         /* Step boxes: every callout-note is a set of steps to do. QualCoder purple (#B453A6,
            from the logo) for borders; a darker shade for text so it passes contrast. */
         div.callout-note.callout { border-left-color: #B453A6 !important;
@@ -270,19 +272,21 @@ differ from this guide. Use the download links below to get 3.8.2.
    **Open Anyway** [confirm the exact message and steps]{.tbd}.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/install-downloads-mac.png`.** The downloaded `.dmg` file in the
-**Downloads** folder.
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-downloads-mac.png`.** The downloaded
+`.dmg` file in the **Downloads** folder.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/install-applications-mac.png`.** The window that opens from the `.dmg`,
-showing QualCoder and the Applications folder (dragging QualCoder into Applications).
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-applications-mac.png`.** The window
+that opens from the `.dmg`, showing QualCoder and the Applications folder (dragging QualCoder into
+Applications).
 :::
 
-::: {.placeholder}
-**Screenshot: `images/install-open-anyway-mac.png`.** System Settings > Privacy & Security with
-the **Open Anyway** button boxed (only if this message appears).
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-open-anyway-mac.png`.** System
+Settings > Privacy & Security with the **Open Anyway** button boxed (only if this message
+appears).
 :::
 
 ::: callout-warning
@@ -313,15 +317,20 @@ the **Apple menu > About This Mac**: it lists a **Chip** (Apple M1, M2, ...) or 
 
 ![The setup wizard in the Downloads folder.](images/install-downloads-win.png){fig-alt="File Explorer's Downloads folder, under Today, showing a file named QualCoder_3_8_2_Win_setup."}
 
-::: {.placeholder}
-**Screenshot: `images/install-only-for-me-win.png`.** The setup wizard step with "only for me"
-selected.
+::: {.placeholder .skip}
+**Suggest removing (to discuss with Nina): the screenshot above, `images/install-downloads-win.png`**
+(the older Downloads folder screenshot).
 :::
 
-::: {.placeholder}
-**Screenshots: `images/install-wizard-1-win.png`, `install-wizard-2-win.png`, ...** One for
-each later step of the setup wizard, with the button to click boxed, ending with the last
-screen (**Finish**, with the option to open QualCoder).
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-only-for-me-win.png`.** The setup
+wizard step with "only for me" selected.
+:::
+
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-wizard-1-win.png`,
+`install-wizard-2-win.png`, ...** One for each later step of the setup wizard, with the button to
+click boxed, ending with the last screen (**Finish**, with the option to open QualCoder).
 :::
 
 :::
@@ -335,9 +344,9 @@ screen (**Finish**, with the option to open QualCoder).
 2. When it asks whether you want to set up AI, click **No**. You can always set it up later.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/install-ai-prompt.png`.** The AI setup question QualCoder shows on first
-launch, with **No** boxed. (If it looks the same on both systems, one screenshot is enough.)
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/install-ai-prompt.png`.** The AI setup
+question QualCoder shows on first launch, with **No** boxed.
 :::
 
 # Create a QualCoder project {#sec-project}
@@ -374,9 +383,10 @@ menu and the tabs each boxed and labeled, so the two are easy to tell apart.
 4. The project opens right away in QualCoder.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/project-create-mac.png`.** The Mac save window, inside
-`qualcoder-workshop`, with the name `intro-qc-workshop` typed in.
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/project-create-mac.png`.** The Mac save
+window, inside `qualcoder-workshop`, with the name `intro-qc-workshop` typed in. It's an ordinary
+save window, so the steps are enough on both systems.
 :::
 
 ### Windows
@@ -392,9 +402,10 @@ menu and the tabs each boxed and labeled, so the two are easy to tell apart.
 4. The project opens right away in QualCoder.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/project-create-win.png`.** The Windows save window, inside
-`qualcoder-workshop`, with the name `intro-qc-workshop` typed in.
+::: {.placeholder .skip}
+**Suggest skipping (to discuss with Nina): `images/project-create-win.png`.** The Windows save
+window, inside `qualcoder-workshop`, with the name `intro-qc-workshop` typed in. It's an ordinary
+save window, so the steps are enough on both systems.
 :::
 
 :::
@@ -405,49 +416,49 @@ QualCoder records who coded each passage. Set your name now, so your codes are l
 This is especially important when you check coding between coders or team members, to make sure
 codes are applied consistently.
 
+The settings are in a different menu on each system.
+
 ::: {.panel-tabset group="os"}
 
 ### Mac
 
 ::: callout-note
-## In QualCoder: set your coder name
+## In QualCoder: open the settings
 
 1. Go to **Qualcoder > Preferences...** (or **Cmd + ,**). On a Mac, the settings are in the
    **Qualcoder** menu, not the **Project** menu.
-2. Next to **Current coder**, click **Change**.
-3. Click **New**, type your coder name and click **OK**.
-4. Make sure your coder name has a check mark next to it.
-5. Click **OK**.
 :::
 
 ![On a Mac, the settings are under Preferences in the Qualcoder menu.](images/project-settings-menu-mac.png){fig-alt="The Qualcoder menu open in the Mac menu bar, with Preferences (Command comma) highlighted. The menu also lists About Qualcoder, Services, Hide Qualcoder, Hide Others, Show All and Quit Qualcoder (Command Q)."}
 
-::: {.placeholder}
-**Screenshot: `images/project-settings-mac.png`.** The Settings window on a Mac with
-**Current coder** and **Change** boxed. (Skip this if it looks the same as the Windows one.)
-:::
-
 ### Windows
 
 ::: callout-note
-## In QualCoder: set your coder name
+## In QualCoder: open the settings
 
 1. Go to **Project > Settings** (or **Alt + S**).
-2. Next to **Current coder**, click **Change**.
-3. Click **New**, type your coder name and click **OK**.
-4. Make sure your coder name has a check mark next to it.
-5. Click **OK**.
 :::
 
 ![Settings is in the Project menu.](images/project-settings-menu-win.png){fig-alt="QualCoder's Project menu open with Settings (Alt+S) highlighted. The menu also lists Create New Project, Open Project, Open Recent Project, Close Project, Project Memo, Project summary, Import, Export and Exit." width="50%"}
 
-![The Change button next to Current coder. A new project's coder is called default.](images/project-settings-win.png){fig-alt="The top of QualCoder's Settings window. Current coder shows default, and the Change button next to it is boxed in red. Below it is the Language setting, English en."}
-
 :::
+
+The Settings window and the coder list are the same on both systems.
+
+::: callout-note
+## In QualCoder: set your coder name
+
+1. Next to **Current coder**, click **Change**.
+2. Click **New**, type your coder name and click **OK**.
+3. Make sure your coder name has a check mark next to it.
+4. Click **OK**.
+:::
+
+![The Change button next to Current coder. A new project's coder is called default.](images/project-settings-win.png){fig-alt="The top of QualCoder's Settings window. Current coder shows default, and the Change button next to it is boxed in red. Below it is the Language setting, English en."}
 
 ::: {.placeholder}
 **Screenshot: `images/project-coder-name.png`.** The coder list with a new name added and its
-check mark. (One screenshot is enough if it looks the same on both systems.)
+check mark (either system).
 :::
 
 ## Turn on backups to your backups folder
@@ -520,42 +531,22 @@ showing the coder name and directory.
 QualCoder copies each file into the project. Later edits in QualCoder change only that copy; your
 original in `data/` stays as it was.
 
-::: {.panel-tabset group="os"}
-
-### Mac
-
 ::: callout-note
 ## In QualCoder: import transcripts
 
 1. In the top menu, click **Manage > Manage Files**. This opens the **Manage** tab.
 2. Click the **Import file into project folder** button.
-3. Go to `qualcoder-workshop/data`, select the transcripts (hold **Cmd** to select more than one)
-   and click **Open**.
-:::
-
-![QualCoder's Open file window in the `data` folder, with all three transcripts selected.](images/import-files-mac.png){fig-alt="QualCoder's Open file window. Look in shows a path ending in qualcoder-workshop/data. Three files are selected: AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, all text/plain. The File name box lists all three, and the Open button is at the lower right." width="80%"}
-
-### Windows
-
-::: callout-note
-## In QualCoder: import transcripts
-
-1. In the top menu, click **Manage > Manage Files**. This opens the **Manage** tab.
-2. Click the **Import file into project folder** button.
-3. Go to `qualcoder-workshop\data`, select the transcripts (hold **Ctrl** to select more than
-   one) and click **Open**.
-:::
-
-::: {.placeholder}
-**Screenshot: `images/import-files-win.png`.** The Windows file picker in `data\` with the
-transcripts selected.
-:::
-
+3. QualCoder opens its own **Open file** window. Go to the `data` folder inside
+   `qualcoder-workshop`.
+4. Select all three transcripts: click the first, then hold **Shift** and click the last.
+5. Click **Open**.
 :::
 
 ![Manage files is the first item in the Manage menu.](images/import-manage-menu.png){fig-alt="QualCoder's Manage menu open with Manage files (Alt+F) highlighted. The other items are Manage cases, Manage journals, Manage attributes, Manage references, Import survey and a greyed-out Manage bad links to files." width="60%"}
 
 ![The Import file into project folder button is the first button on the Manage tab.](images/import-button.png){fig-alt="The Manage tab in QualCoder. The first button in its toolbar, a page with a plus sign, is boxed in red, with the tooltip Import file into project folder. The file count reads Files: 0." width="60%"}
+
+![QualCoder's Open file window in the `data` folder, with all three transcripts selected. It's QualCoder's own window, so it looks the same on Mac and Windows.](images/import-files.png){fig-alt="QualCoder's Open file window. Look in shows a path ending in qualcoder-workshop/data. Three files are selected: AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, all text/plain. The File name box lists all three, and the Open button is at the lower right." width="80%"}
 
 ## Add attributes
 
