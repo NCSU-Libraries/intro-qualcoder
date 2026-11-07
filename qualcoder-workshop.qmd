@@ -469,10 +469,7 @@ QualCoder can keep backups of your project for you. Point it at the `backups` fo
 5. Click **OK**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/project-backups-mac.png`.** The Mac folder picker with `backups` selected
-and the confirm button boxed.
-:::
+![After clicking Default project directory: `backups` selected inside `qualcoder-workshop`, ready to click Open.](images/project-backups-mac.png){fig-alt="A Mac folder picker open over QualCoder's Settings window. It shows the qualcoder-workshop folder with three folders: backups (selected), data and intro-qc-workshop.qda. The Open button is at the lower right. Behind it, the Settings window shows the Default project directory button with a path ending in qualcoder-workshop/backups below it." width="80%"}
 
 ### Windows
 
@@ -536,10 +533,7 @@ original in `data/` stays as it was.
    and click **Open**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/import-files-mac.png`.** The Mac file picker in `data/` with the
-transcripts selected.
-:::
+![QualCoder's Open file window in the `data` folder, with all three transcripts selected.](images/import-files-mac.png){fig-alt="QualCoder's Open file window. Look in shows a path ending in qualcoder-workshop/data. Three files are selected: AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, all text/plain. The File name box lists all three, and the Open button is at the lower right." width="80%"}
 
 ### Windows
 
