@@ -361,10 +361,7 @@ QualCoder has two ways to get around, and this guide uses both:
 - **The tabs** inside the QualCoder window: **Action Log**, **Manage**, **Coding**, **Reports**
   and **AI Chat**. Choosing an item from the top menu often opens one of these tabs.
 
-::: {.placeholder}
-**Screenshot: `images/project-menus-tabs.png`.** The top of the QualCoder window with the top
-menu and the tabs each boxed and labeled, so the two are easy to tell apart.
-:::
+![The top menu and the tabs, at the top of the QualCoder window on Windows.](images/project-menus-tabs.png){fig-alt="The top of the QualCoder window on Windows. A red box labeled Top menu surrounds Project, Manage, Coding, Reports, AI and Help. Below it, a red box labeled Tabs surrounds Action Log, Manage, Coding, Reports and AI Chat." width="80%"}
 
 ## Create the project
 
@@ -456,10 +453,7 @@ The Settings window and the coder list are the same on both systems.
 
 ![The Change button next to Current coder. A new project's coder is called default.](images/project-settings-win.png){fig-alt="The top of QualCoder's Settings window. Current coder shows default, and the Change button next to it is boxed in red. Below it is the Language setting, English en."}
 
-::: {.placeholder}
-**Screenshot: `images/project-coder-name.png`.** The coder list with a new name added and its
-check mark (either system).
-:::
+![The coder list after adding a new coder name. The check mark shows which name is in use.](images/project-coder-name.png){fig-alt="QualCoder's Coders window: Choose your coder name. Three names are listed: Nina, with a check mark, default and Speaker coding, each with 0 codings and visible. Below are New, Rename and Merge buttons, and OK, Cancel and Help." width="55%"}
 
 ## Turn on backups to your backups folder
 
@@ -495,10 +489,7 @@ QualCoder can keep backups of your project for you. Point it at the `backups` fo
 5. Click **OK**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/project-backups-win.png`.** The Windows folder picker with `backups`
-selected and **Select Folder** boxed.
-:::
+![After clicking Default project directory: the backups folder selected, ready to click Select Folder.](images/project-backups-win.png){fig-alt="A Windows folder picker titled Choose a default output folder. The project folder holds Backups (selected), Data and DemoProject.qda. The Folder box reads Backups, and the Select Folder button is boxed in red." width="70%"}
 
 :::
 
@@ -516,13 +507,11 @@ changes in the **Action Log** tab. It updates every time you change the project.
 ## In QualCoder: check the Action Log
 
 1. Click the **Action Log** tab.
-2. Check that your coder name and the project directory are right.
+2. Check that **Coder** shows your coder name and **Working directory** ends with
+   `qualcoder-workshop/backups`.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/project-action-log.png`.** The Action Log tab after the settings change,
-showing the coder name and directory.
-:::
+![The Action Log after the settings change. The last line confirms the new coder name.](images/project-action-log.png){fig-alt="The Action Log tab under the heading Settings. It lists Coder: Nina, the font, a Working directory path ending in Qualcoder Workshop/Backups, Backup on open: True and other settings. The last line reads Coder name changed to: Nina." width="90%"}
 
 # Import transcripts {#sec-import}
 
@@ -548,6 +537,8 @@ original in `data/` stays as it was.
 
 ![QualCoder's Open file window in the `data` folder, with all three transcripts selected. It's QualCoder's own window, so it looks the same on Mac and Windows.](images/import-files.png){fig-alt="QualCoder's Open file window. Look in shows a path ending in qualcoder-workshop/data. Three files are selected: AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, all text/plain. The File name box lists all three, and the Open button is at the lower right." width="80%"}
 
+![After importing, the Manage tab lists the three transcripts.](images/import-done.png){fig-alt="The Manage tab with Files: 3. A table lists AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, each with its import date, and empty Memo and Case columns." width="80%"}
+
 ## Add attributes
 
 Attributes describe your files: for example, the participant's role, the interview date or the
@@ -567,19 +558,24 @@ recording (a number).
 
 1. In the top menu, go to **Manage > Manage Attributes**.
 2. Click the **(x)** button to add an attribute.
-3. Type `Genre`, choose **Character** (text), and choose **Files** for what it describes (it can
-   also describe cases or journals). Click **OK**.
-4. Click **(x)** again. Type `Year`, choose **Numeric** and **Files**, and click **OK**.
+3. In the **Add Attribute** window, type `Genre`, choose **Character** (text) and click **OK**.
+4. In the **Assign attribute** window, choose **Files** (an attribute can also describe cases or
+   journals) and click **OK**.
+5. Click **(x)** again. Type `Year`, choose **Numeric** and click **OK**. Choose **Files** and
+   click **OK**.
 :::
 
 ![Manage attributes is in the Manage menu.](images/attributes-menu.png){fig-alt="QualCoder's Manage menu open with Manage attributes (Alt+A) highlighted, below Manage files, Manage cases and Manage journals." width="60%"}
 
 ![The (x) button adds an attribute.](images/attributes-add-button.png){fig-alt="The attributes tab with two buttons: an (x) button boxed in red, and a trash can button." width="40%"}
 
-::: {.placeholder}
-**Screenshot: `images/attributes-create.png`.** The new attribute window with a name typed, the
-type chosen and **Files** selected.
+::: {layout-ncol="2"}
+![Genre is a Character (text) attribute.](images/attributes-create-genre.png){fig-alt="The Add Attribute window with Genre typed as the attribute name and Character selected instead of Numeric, above OK and Cancel buttons."}
+
+![Year is a Numeric attribute.](images/attributes-create-year.png){fig-alt="The Add Attribute window with Year typed as the attribute name and Numeric selected instead of Character, above OK and Cancel buttons."}
 :::
+
+![Next, choose Files, so the attribute describes each transcript.](images/attributes-assign.png){fig-alt="The Assign attribute window: Assign attribute to Cases, Files or Journals, with Files selected, and an OK button." width="45%"}
 
 ::: callout-note
 ## In QualCoder: fill in the attribute for each file
@@ -589,10 +585,7 @@ type chosen and **Files** selected.
    double-click the cell.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/attributes-values.png`.** The Manage tab with the attribute column filled
-in for each transcript.
-:::
+![The Manage tab with a Genre and a Year for each transcript.](images/attributes-values.png){fig-alt="The Manage tab listing the three transcripts with two new columns: AliciaKeys.txt R&B 2001, CyndiLauper.txt Pop 1983 and DollyParton.txt Country 1971." width="80%"}
 
 ::: callout-tip
 ## Extra: put attributes in your own order
@@ -616,10 +609,7 @@ QualCoder lists attributes alphabetically. To set your own order, number them: "
    right.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/coding-ready.png`.** The Coding tab with the coder name boxed, the file
-list on the left and a transcript open on the right.
-:::
+![The Coding tab, ready to code: the coder name (boxed), the transcripts on the left and the open transcript on the right.](images/coding-ready.png){fig-alt="QualCoder's Coding tab. The Coder box, reading Nina, is boxed in red. On the left, the Documents list shows AliciaKeys.txt (selected), CyndiLauper.txt and DollyParton.txt, above an empty codes list. On the right is the Alicia Keys interview, starting with its source and copyright lines."}
 
 ## Demo: coding with example codes {#sec-demo}
 
@@ -631,7 +621,7 @@ your future self) applies it the same way.
 |------|---------------------------|----------------------------|
 | **Inspiration from life** | ties a song to something that happened to them or people they know | Cyndi Lauper on the loud clock behind "Time After Time" |
 | **Industry pushback** | describes the record company, managers or radio disagreeing with them, or them pushing back | Cyndi Lauper on choosing her first single |
-| **Faith and spirituality** | mentions God, faith or a spiritual feeling | Alicia Keys on the chorus of "Troubles" |
+| **Faith/spirituality** | mentions God, faith or a spiritual feeling | Alicia Keys on the chorus of "Troubles" |
 | **Why it connects** | explains why listeners relate to the song | Dolly Parton on why "Coat" became so dear to people |
 
 A list of codes like this, with definitions and examples, is a **codebook**. In your own research
@@ -660,10 +650,7 @@ The shortcuts are the same on Mac and Windows [confirm on a Mac]{.tbd}.
 6. To remove a code, click in the coded text and press **Shift + U**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/coding-new-code.png`.** A highlighted passage with the right-click menu
-open, **Mark with new code (N)** boxed.
-:::
+![Right-click highlighted text to code it. Mark with new code (N) is boxed.](images/coding-new-code.png){fig-alt="The Coding tab with a passage of the Dolly Parton interview highlighted and a right-click menu open. The menu lists Mark (Q), Mark with recent code (R), Mark with new code (N), boxed in red, in vivo code (V), Annotate (A), Copy to clipboard, Copy with metadata, Set bookmark (B), a greyed-out AI Text Analysis and Hide control panel (H). The codes list on the left shows Faith/spirituality, Industry pushback, Inspiration from life and Why it connects."}
 
 Right-click in the codes list to rename a code, change its color, add a memo to it, add a new code
 or category, or delete it.
@@ -697,15 +684,13 @@ writing your analysis.
 1. Code the text first.
 2. Click anywhere in the coded text.
 3. Press **Shift + M**, or right-click and choose **Memo coded text (M)**.
-4. Type your memo and close the window. The memo'd text is now *italicized*.
+4. Type your memo and click **OK**. The memo'd text is now *italicized*.
 :::
 
 If the text has more than one code, QualCoder asks which code the memo belongs to. That choice
 decides where the memo shows up in reports.
 
-::: {.placeholder}
-**Screenshot: `images/memos-coded-text.png`.** The memo window open on a coded passage.
-:::
+![A memo on a passage coded Industry pushback. The window's title names the code.](images/memos-coded-text.png){fig-alt="The Coding tab with a passage of the Alicia Keys interview highlighted in the color of the code Industry pushback. A window titled Memo for Coded text: Industry pushback is open over it, with the memo: Label didn't get her/her music; got out of the contract to sign w Clive Davis on new label. Below are Clear, OK and Cancel buttons."}
 
 ## Annotations
 
@@ -719,13 +704,10 @@ the time.
 
 1. Highlight the text that needs explaining.
 2. Press **Shift + A**, or right-click and choose **Annotate (A)**.
-3. Type the annotation. The annotated text is now **bold**.
+3. Type the annotation and click **OK**. The annotated text is now **bold**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/annotations.png`.** An annotation window open on "Porter" in the Dolly
-Parton interview.
-:::
+![An annotation on "Porter" in the Dolly Parton interview.](images/annotations.png){fig-alt="The Coding tab with the Dolly Parton interview open. Over it is a window titled Annotation, containing the text Porter Wagoner, with Clear, OK and Cancel buttons. Behind it, the passage that mentions Porters outfits is highlighted in a code's color."}
 
 ## What the formatting means
 
@@ -759,11 +741,6 @@ everything: all the codes in all three interviews. Then we'll add memos to the r
 5. Click the large **Play** button at the top.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/reports-coded-text-mac.png`.** The report window with files and codes
-selected and the **Play** button boxed.
-:::
-
 ### Windows
 
 ::: callout-note
@@ -777,12 +754,9 @@ selected and the **Play** button boxed.
 5. Click the large **Play** button at the top.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/reports-coded-text-win.png`.** The report window with files and codes
-selected and the **Play** button boxed.
 :::
 
-:::
+![A report of all the codes in all three transcripts. The Play button is boxed. The report window looks the same on Mac and Windows.](images/reports-coded-text.png){fig-alt="The Reports tab with Coding report at the top and the memo drop-down set to None. All three transcripts are selected on the left, and all four codes below them, with their counts. The Play button is boxed in red. On the right, the report lists its search parameters (all coders, codes 4 of 4, files 3 of 3), then each coded passage under a colored heading, starting with Faith/spirituality in AliciaKeys.txt."}
 
 ## Include memos, or only memos
 
@@ -817,6 +791,8 @@ remind you what each code means.
 2. Click **Play**. The report now lists just your memos: a first draft of your analysis notes.
 :::
 
+![A report of only coded memos: each memo under the code and file it belongs to.](images/reports-only-memos.png){fig-alt="The Reports tab with the memo drop-down set to Only coded memos. The report begins: Coded memos shown if available. Coded data not shown. After the search parameters, it lists two memos, one under Industry pushback and one under Why it connects, both in AliciaKeys.txt."}
+
 ## A codes-by-file matrix
 
 A matrix shows which codes appear in which files: codes are columns and files are rows.
@@ -831,9 +807,7 @@ A matrix shows which codes appear in which files: codes are columns and files ar
 
 ![The matrix options sit next to the Play button.](images/reports-matrix-options.png){fig-alt="A Play button, with a Transpose matrix check box above a drop-down set to Codes by file, which is boxed in red, and an Export matrix button." width="70%"}
 
-::: {.placeholder}
-**Screenshot: `images/reports-matrix.png`.** A codes-by-file matrix for today's transcripts.
-:::
+![A codes-by-file matrix: one row per transcript, one column per code.](images/reports-matrix.png){fig-alt="The Reports tab with the matrix drop-down set to Codes by file. A grid has rows for AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt and columns for Faith/spirituality, Industry pushback and Inspiration from life. Each cell shows the coded text for that code in that file, under a heading in the code's color."}
 
 ## Try other reports
 
@@ -905,10 +879,7 @@ in the `backups` folder.
    `intro-qc-workshop_BKUP_20261106_10.qda` (the date and the hour).
 :::
 
-::: {.placeholder}
-**Screenshot: `images/close-backup-log.png`.** The Action Log after reopening the project, with
-the **Project backup created** line boxed. Crop it so no username shows in the path.
-:::
+![After reopening, the Action Log shows where the backup was saved.](images/close-backup-log.png){fig-alt="The top of the Action Log tab. A line boxed in red reads Project backup created, followed by a path to the Backups folder and a backup named DemoProject_BKUP_20261110_15.qda. Below it: Project Opened: DemoProject.qda."}
 
 ## Close it again and quit
 
