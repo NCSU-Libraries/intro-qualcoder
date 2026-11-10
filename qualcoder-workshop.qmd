@@ -288,10 +288,9 @@ the **Apple menu > About This Mac**: it lists a **Chip** (Apple M1, M2, ...) or 
    [QualCoder_3_8_2_Win_setup.exe](https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_Win_setup.exe)
    (246 MB).
 2. Find the setup wizard in your **Downloads** folder and double-click it to start.
-3. When asked, choose **Download only for me** [confirm the exact wording]{.tbd}. On university
+3. When asked, choose **Download only for me**. On university
    computers you can't install it for all users.
-4. [Click through the rest of the wizard: list each button, such as **Next**, **Install** and
-   **Finish**]{.tbd}.
+4. Click through the rest of the wizard, then click **Finish**.
 5. Let the setup wizard open QualCoder when the installation is complete.
 :::
 
