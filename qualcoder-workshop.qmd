@@ -125,13 +125,11 @@ together everything you coded in the interviews.
 ::: {.placeholder}
 **Screenshot: `images/roadmap-end-result.png`.** The Coding tab of a finished workshop project:
 the codes list on the left with 2–5 codes in their colors, a transcript on the right with several
-passages highlighted, at least one passage underlined (2+ codes) and one italicized (memo).
+passages highlighted, at least one passage underlined (2+ codes) and one italicized (memo). Take it after the demo
+transcripts have been coded.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/roadmap-end-report.png`.** A report of all the codes in all three
-transcripts, with memos included. (Take both after the demo transcripts have been coded.)
-:::
+![A report of all the codes in all three interviews.](images/roadmap-end-report.png){fig-alt="QualCoder's Reports tab. All three transcripts and all four codes are selected on the left: Faith/spirituality, Industry pushback, Inspiration from life and Why it connects, with their counts. On the right, the report lists each coded passage under a heading in its code's color, with the file name and coder."}
 
 ------------------------------------------------------------------------
 
@@ -787,10 +785,7 @@ sure everything is saved before you copy the folder anywhere.
    **Closing project**.
 :::
 
-::: {.placeholder}
-**Screenshot: `images/close-project-mac.png`.** The Project menu on a Mac with **Close Project**
-boxed.
-:::
+![On a Mac, Close Project is in the Project menu in the menu bar.](images/close-project-mac.png){fig-alt="QualCoder's Project menu open in the Mac menu bar, with Close Project (Option X) highlighted. The menu also lists Create New Project, Open Project, Open Recent Project, Project Memo, Project summary, Import and Export." width="80%"}
 
 ### Windows
 
