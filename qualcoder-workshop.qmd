@@ -18,7 +18,6 @@ format:
           padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 4px; }
         .tbd { background: #fef3c7; padding: 0 0.2em; }
         /* Screenshots we suggest not taking (or keeping), pending a decision with Nina. */
-        .placeholder.skip { border-color: #9ca3af; background: #f3f4f6; color: #374151; }
         /* Step boxes: every callout-note is a set of steps to do. QualCoder purple (#B453A6,
            from the logo) for borders; a darker shade for text so it passes contrast. */
         div.callout-note.callout { border-left-color: #B453A6 !important;
@@ -272,23 +271,6 @@ differ from this guide. Use the download links below to get 3.8.2.
    **Open Anyway** [confirm the exact message and steps]{.tbd}.
 :::
 
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-downloads-mac.png`.** The downloaded
-`.dmg` file in the **Downloads** folder.
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-applications-mac.png`.** The window
-that opens from the `.dmg`, showing QualCoder and the Applications folder (dragging QualCoder into
-Applications).
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-open-anyway-mac.png`.** System
-Settings > Privacy & Security with the **Open Anyway** button boxed (only if this message
-appears).
-:::
-
 ::: callout-warning
 ## Gotcha: 3.8.2 is for Apple silicon Macs only
 
@@ -315,24 +297,6 @@ the **Apple menu > About This Mac**: it lists a **Chip** (Apple M1, M2, ...) or 
 5. Let the setup wizard open QualCoder when the installation is complete.
 :::
 
-![The setup wizard in the Downloads folder.](images/install-downloads-win.png){fig-alt="File Explorer's Downloads folder, under Today, showing a file named QualCoder_3_8_2_Win_setup."}
-
-::: {.placeholder .skip}
-**Suggest removing (to discuss with Nina): the screenshot above, `images/install-downloads-win.png`**
-(the older Downloads folder screenshot).
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-only-for-me-win.png`.** The setup
-wizard step with "only for me" selected.
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-wizard-1-win.png`,
-`install-wizard-2-win.png`, ...** One for each later step of the setup wizard, with the button to
-click boxed, ending with the last screen (**Finish**, with the option to open QualCoder).
-:::
-
 :::
 
 ## The first time QualCoder opens
@@ -342,11 +306,6 @@ click boxed, ending with the last screen (**Finish**, with the option to open Qu
 
 1. Wait. QualCoder is not very quick to open.
 2. When it asks whether you want to set up AI, click **No**. You can always set it up later.
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/install-ai-prompt.png`.** The AI setup
-question QualCoder shows on first launch, with **No** boxed.
 :::
 
 # Create a QualCoder project {#sec-project}
@@ -380,12 +339,6 @@ QualCoder has two ways to get around, and this guide uses both:
 4. The project opens right away in QualCoder.
 :::
 
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/project-create-mac.png`.** The Mac save
-window, inside `qualcoder-workshop`, with the name `intro-qc-workshop` typed in. It's an ordinary
-save window, so the steps are enough on both systems.
-:::
-
 ### Windows
 
 ![](images/project-create-menu-win.png){fig-alt="QualCoder's Project menu open, with Create New Project (Ctrl+N) boxed in red, above Open Project and Open Recent Project." width="60%"}
@@ -397,12 +350,6 @@ save window, so the steps are enough on both systems.
 2. In the save window, go to your `qualcoder-workshop` folder.
 3. Name the project `intro-qc-workshop` and click **Save**. QualCoder adds `.qda` to the name.
 4. The project opens right away in QualCoder.
-:::
-
-::: {.placeholder .skip}
-**Suggest skipping (to discuss with Nina): `images/project-create-win.png`.** The Windows save
-window, inside `qualcoder-workshop`, with the name `intro-qc-workshop` typed in. It's an ordinary
-save window, so the steps are enough on both systems.
 :::
 
 :::
