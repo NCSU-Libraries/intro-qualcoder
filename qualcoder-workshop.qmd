@@ -760,12 +760,6 @@ A matrix shows which codes appear in which files: codes are columns and files ar
 
 To get a different report, change what's selected and click **Play** again.
 
-::: {.placeholder}
-**Screenshot: `images/reports-options.png`.** The whole report window with each setting boxed and
-labeled: the file list, the code list, the memo drop-down, the matrix drop-down and the **Play**
-button.
-:::
-
 QualCoder has many other report formats and settings. See the
 [QualCoder reports documentation](https://qualcoder.org/doc/en/5.3.-Reports/).
 
