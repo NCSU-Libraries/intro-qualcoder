@@ -122,12 +122,7 @@ By the end of the session you'll have a project that looks like this: three inte
 singers, coded with a few codes (each has its own color), a memo or two, and a report that pulls
 together everything you coded in the interviews.
 
-::: {.placeholder}
-**Screenshot: `images/roadmap-end-result.png`.** The Coding tab of a finished workshop project:
-the codes list on the left with 2–5 codes in their colors, a transcript on the right with several
-passages highlighted, at least one passage underlined (2+ codes) and one italicized (memo). Take it after the demo
-transcripts have been coded.
-:::
+![The Coding tab of a finished project: the Dolly Parton interview with passages highlighted in each code's color.](images/roadmap-end-result.png){fig-alt="QualCoder's Coding tab on a Mac with DollyParton.txt open. The codes list on the lower left shows four codes in their colors: Faith/spirituality (yellow), Industry pushback (red), Inspiration from life (blue) and Why it connects (green). In the transcript, a long passage about writing the song on the bus is highlighted in blue and italicized because it has a memo, with the word Porters in bold for an annotation. A passage about the record company is red, a sentence about the Holy Spirit is yellow, and two paragraphs about why the song connects are green; the end of the second is also yellow and underlined because it has two codes."}
 
 ![A report of all the codes in all three interviews.](images/roadmap-end-report.png){fig-alt="QualCoder's Reports tab on a Mac. All three transcripts and all four codes are selected on the left: Faith/spirituality, Industry pushback, Inspiration from life and Why it connects, with their counts. On the right, the report lists each coded passage under a heading in its code's color, with the file name and coder: Faith/spirituality passages from DollyParton.txt, then Industry pushback passages from AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, then Inspiration from life."}
 
