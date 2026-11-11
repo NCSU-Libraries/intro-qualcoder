@@ -129,7 +129,7 @@ passages highlighted, at least one passage underlined (2+ codes) and one italici
 transcripts have been coded.
 :::
 
-![A report of all the codes in all three interviews.](images/roadmap-end-report.png){fig-alt="QualCoder's Reports tab. All three transcripts and all four codes are selected on the left: Faith/spirituality, Industry pushback, Inspiration from life and Why it connects, with their counts. On the right, the report lists each coded passage under a heading in its code's color, with the file name and coder."}
+![A report of all the codes in all three interviews.](images/roadmap-end-report.png){fig-alt="QualCoder's Reports tab on a Mac. All three transcripts and all four codes are selected on the left: Faith/spirituality, Industry pushback, Inspiration from life and Why it connects, with their counts. On the right, the report lists each coded passage under a heading in its code's color, with the file name and coder: Faith/spirituality passages from DollyParton.txt, then Industry pushback passages from AliciaKeys.txt, CyndiLauper.txt and DollyParton.txt, then Inspiration from life."}
 
 ------------------------------------------------------------------------
 
@@ -578,7 +578,7 @@ Highlight the text you want to code, then use a keyboard shortcut or right-click
 | Code with a **recently used** code | **Shift + R** | **Mark with recent code (R)**, then pick from the list |
 | **Remove** a code from text | **Shift + U** | **Unmark (U)** |
 
-The shortcuts are the same on Mac and Windows [confirm on a Mac]{.tbd}.
+The shortcuts are the same on Mac and Windows.
 
 ::: callout-note
 ## In QualCoder: code a passage
@@ -598,7 +598,7 @@ The shortcuts are the same on Mac and Windows [confirm on a Mac]{.tbd}.
 Right-click in the codes list to rename a code, change its color, add a memo to it, add a new code
 or category, or delete it.
 
-![Right-click a code to change it.](images/coding-codes-menu.png){fig-alt="The codes list with five codes, each highlighted in its own color: Autonomy, Edu Background, Goals, Lessons Learned and Mgmt Influence. A right-click menu is open, listing Add a new code, Add a new category, Rename, View or edit memo, Delete and Change code color." width="60%"}
+![Right-click a code to change it.](images/coding-codes-menu.png){fig-alt="The codes list with the four workshop codes, each in its own color: Faith/spirituality, Industry pushback, Inspiration from life and Why it connects. A right-click menu is open, listing Add a new code, Add a new category, Rename, View or edit memo, Delete, Change code color, Show coded files, Move code to, Show codes like, Show codes of colour and three sort options." width="60%"}
 
 ## Do it yourself: 5 minutes of coding {#sec-diy}
 
@@ -676,7 +676,7 @@ everything: all the codes in all three interviews. Then we'll add memos to the r
 ::: callout-note
 ## In QualCoder: report all your coded text
 
-1. In the top menu, click **Reports > Coding reports** [confirm the menu path]{.tbd}.
+1. In the top menu, click **Reports > Coding reports**.
 2. Select all three transcripts: click the first, then hold **Shift** and click the last. (To
    pick only some, hold **Cmd** and click each one.)
 3. Select all the codes, the same way.
@@ -689,7 +689,7 @@ everything: all the codes in all three interviews. Then we'll add memos to the r
 ::: callout-note
 ## In QualCoder: report all your coded text
 
-1. In the top menu, click **Reports > Coding reports** [confirm the menu path]{.tbd}.
+1. In the top menu, click **Reports > Coding reports**.
 2. Select all three transcripts: click the first, then hold **Shift** and click the last. (To
    pick only some, hold **Ctrl** and click each one.)
 3. Select all the codes, the same way.
@@ -914,7 +914,7 @@ QualCoder may open your most recent project when it starts. If it doesn't:
 ## In QualCoder: open a project
 
 1. Click **Project > Open Project**, go to your project folder, click once on the `.qda` folder
-   and click **Select Folder** (Mac: [button name]{.tbd}).
+   and click **Select Folder** (on a Mac, **Open**).
 2. Or click **Project > Open Recent Project** and choose the project.
 :::
 
